@@ -24,7 +24,7 @@ export const Hero = () => {
             </div>
             <div className="mt-3 rounded-md shadow-md sm:mt-0 sm:ml-3">
               <a
-                href="#"
+                href="#paslaugos"
                 className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-indigo-600 bg-white hover:bg-gray-50 md:text-lg"
               >
                 Paslaugos

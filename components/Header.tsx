@@ -22,13 +22,13 @@ export const Header = () => {
               </div>
               <nav className="hidden lg:flex space-x-8">
                 <a
-                  href="#"
+                  href="#paslaugos"
                   className="text-base font-medium text-gray-600 hover:text-indigo-500"
                 >
                   Paslaugos
                 </a>
                 <a
-                  href="#"
+                  href="#kodel-mes"
                   className="text-base font-medium text-gray-600 hover:text-indigo-500"
                 >
                   Kodėl mes?
@@ -46,13 +46,13 @@ export const Header = () => {
                   Blogas
                 </a>
                 <a
-                  href="#"
+                  href="#apie-mus"
                   className="text-base font-medium text-gray-600 hover:text-indigo-500"
                 >
                   Apie mus
                 </a>
                 <a
-                  href="#"
+                  href="#komanda"
                   className="text-base font-medium text-gray-600 hover:text-indigo-500"
                 >
                   Komanda
