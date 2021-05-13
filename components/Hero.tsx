@@ -64,7 +64,7 @@ export const Hero = () => {
       <div className="w-full lg:w-1/2">
         <img
           className="w-full h-144 lg:h-full object-cover object-center"
-          src="/hero-image-opt.jpg"
+          src="/hero-image-greybg.jpg"
           alt=""
         />
         {/* <Image

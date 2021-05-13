@@ -90,15 +90,17 @@ export const Header = () => {
                 <div className="pt-3 pb-2 px-5">
                   <div className="flex items-center">
                     <div className="flex justify-start flex-1">
-                      <a href="#" className="text-xl font-black">
-                        <span className="sr-only">Hirepartners logo</span>
-                        {/* <img
+                      <Link href="/" passHref>
+                        <a className="text-xl font-black">
+                          <span className="sr-only">Hirepartners logo</span>
+                          {/* <img
                       className="h-8 w-auto sm:h-10"
                       src=""
                       alt=""
                     /> */}
-                        Logo
-                      </a>
+                          Logo
+                        </a>
+                      </Link>
                     </div>
                     <div className="ml-auto">
                       <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-600 hover:bg-indigo-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-300">
@@ -109,42 +111,36 @@ export const Header = () => {
                   </div>
                 </div>
                 <div className="py-6 px-5 flex sm:justify-between flex-col sm:flex-row">
-                  <a
-                    href="#"
-                    className="text-base font-medium text-gray-600 hover:text-indigo-500 mb-2"
-                  >
-                    Paslaugos
-                  </a>
-                  <a
-                    href="#"
-                    className="text-base font-medium text-gray-600 hover:text-indigo-500 mb-2"
-                  >
-                    Kodėl mes?
-                  </a>
-                  <a
-                    href="#"
-                    className="text-base font-medium text-gray-600 hover:text-indigo-500 mb-2"
-                  >
-                    Darbo pasiūlymai
-                  </a>
-                  <a
-                    href="#"
-                    className="text-base font-medium text-gray-600 hover:text-indigo-500 mb-2"
-                  >
-                    Blogas
-                  </a>
-                  <a
-                    href="#"
-                    className="text-base font-medium text-gray-600 hover:text-indigo-500 mb-2"
-                  >
-                    Apie mus
-                  </a>
-                  <a
-                    href="#"
-                    className="text-base font-medium text-gray-600 hover:text-indigo-500 mb-2"
-                  >
-                    Komanda
-                  </a>
+                  <Link href="/#paslaugos" passHref>
+                    <a className="text-base font-medium text-gray-600 hover:text-indigo-500 mb-2">
+                      Paslaugos
+                    </a>
+                  </Link>
+                  <Link href="/#kodel-mes" passHref>
+                    <a className="text-base font-medium text-gray-600 hover:text-indigo-500 mb-2">
+                      Kodėl mes?
+                    </a>
+                  </Link>
+                  <Link href="/darbo-pasiulymai" passHref>
+                    <a className="text-base font-medium text-gray-600 hover:text-indigo-500 mb-2">
+                      Darbo pasiūlymai
+                    </a>
+                  </Link>
+                  <Link href="/blogas" passHref>
+                    <a className="text-base font-medium text-gray-600 hover:text-indigo-500 mb-2">
+                      Blogas
+                    </a>
+                  </Link>
+                  <Link href="/#apie-mus" passHref>
+                    <a className="text-base font-medium text-gray-600 hover:text-indigo-500 mb-2">
+                      Apie mus
+                    </a>
+                  </Link>
+                  <Link href="/#komanda" passHref>
+                    <a className="text-base font-medium text-gray-600 hover:text-indigo-500 mb-2">
+                      Komanda
+                    </a>
+                  </Link>
                 </div>
               </div>
             </Popover.Panel>
