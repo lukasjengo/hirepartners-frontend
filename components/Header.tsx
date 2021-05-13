@@ -1,4 +1,5 @@
 import { Fragment } from 'react';
+import Link from 'next/link';
 import { Popover, Transition } from '@headlessui/react';
 import { MenuIcon, XIcon } from '@heroicons/react/outline';
 
@@ -10,61 +11,56 @@ export const Header = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6">
             <div className="flex justify-between items-center py-4 space-x-4">
               <div className="flex justify-start flex-1">
-                <a href="#" className="text-xl font-black">
-                  <span className="sr-only">Hirepartners logo</span>
-                  {/* <img
+                <Link href="/" passHref>
+                  <a className="text-xl font-black">
+                    <span className="sr-only">Hirepartners logo</span>
+                    {/* <img
                       className="h-8 w-auto sm:h-10"
                       src=""
                       alt=""
                     /> */}
-                  Logo
-                </a>
+                    Logo
+                  </a>
+                </Link>
               </div>
               <nav className="hidden lg:flex space-x-8">
-                <a
-                  href="#paslaugos"
-                  className="text-base font-medium text-gray-600 hover:text-indigo-500"
-                >
-                  Paslaugos
-                </a>
-                <a
-                  href="#kodel-mes"
-                  className="text-base font-medium text-gray-600 hover:text-indigo-500"
-                >
-                  Kodėl mes?
-                </a>
-                <a
-                  href="#"
-                  className="text-base font-medium text-gray-600 hover:text-indigo-500"
-                >
-                  Darbo pasiūlymai
-                </a>
-                <a
-                  href="#"
-                  className="text-base font-medium text-gray-600 hover:text-indigo-500"
-                >
-                  Blogas
-                </a>
-                <a
-                  href="#apie-mus"
-                  className="text-base font-medium text-gray-600 hover:text-indigo-500"
-                >
-                  Apie mus
-                </a>
-                <a
-                  href="#komanda"
-                  className="text-base font-medium text-gray-600 hover:text-indigo-500"
-                >
-                  Komanda
-                </a>
+                <Link href="/#paslaugos" passHref>
+                  <a className="text-base font-medium text-gray-600 hover:text-indigo-500">
+                    Paslaugos
+                  </a>
+                </Link>
+                <Link href="/#kodel-mes" passHref>
+                  <a className="text-base font-medium text-gray-600 hover:text-indigo-500">
+                    Kodėl mes?
+                  </a>
+                </Link>
+                <Link href="/darbo-pasiulymai" passHref>
+                  <a className="text-base font-medium text-gray-600 hover:text-indigo-500">
+                    Darbo pasiūlymai
+                  </a>
+                </Link>
+                <Link href="/blogas" passHref>
+                  <a className="text-base font-medium text-gray-600 hover:text-indigo-500">
+                    Blogas
+                  </a>
+                </Link>
+                <Link href="/#apie-mus" passHref>
+                  <a className="text-base font-medium text-gray-600 hover:text-indigo-500">
+                    Apie mus
+                  </a>
+                </Link>
+                <Link href="/#komanda" passHref>
+                  <a className="text-base font-medium text-gray-600 hover:text-indigo-500">
+                    Komanda
+                  </a>
+                </Link>
               </nav>
               <div className="flex items-center justify-end md:flex-1 lg:w-0">
-                <a
-                  href="#"
-                  className="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-md text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700"
-                >
-                  Susisiekti
-                </a>
+                <Link href="/kontaktai" passHref>
+                  <a className="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-md text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700">
+                    Susisiekti
+                  </a>
+                </Link>
               </div>
               <div className="lg:hidden">
                 <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-600 hover:bg-indigo-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-300">

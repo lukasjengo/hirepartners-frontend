@@ -1,12 +1,13 @@
 import React from 'react';
+import Link from 'next/link';
 
 export const CtaBanner = () => {
   return (
     <div className="relative bg-indigo-700">
       <div className="h-56 sm:h-72 md:absolute md:left-0 md:h-full md:w-1/2">
         <img
-          className="w-full h-full object-cover"
-          src="/cta-image.jpg"
+          className="w-full h-full object-cover object-center"
+          src="/cta-image-opt.jpg"
           alt=""
         />
       </div>
@@ -18,31 +19,24 @@ export const CtaBanner = () => {
           <p className="mt-2 text-white text-3xl font-extrabold tracking-tight sm:text-4xl">
             Nuolat atnaujinamas darbų sąrašas
           </p>
-          <p className="mt-3 text-lg text-gray-300">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et, egestas
-            tempus tellus etiam sed. Quam a scelerisque amet ullamcorper eu enim
-            et fermentum, augue. Aliquet amet volutpat quisque ut interdum
-            tincidunt duis.
-          </p>
           <div className="mt-8">
             <div className="inline-flex rounded-md shadow">
-              <a
-                href="/"
-                className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-gray-900 bg-white hover:bg-gray-50"
-              >
-                Pasiūlymų sąrašas
-                <svg
-                  className="-mr-1 ml-3 h-5 w-5 text-gray-400"
-                  data-todo-x-description="Heroicon name: solid/external-link"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                  aria-hidden="true"
-                >
-                  <path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z"></path>
-                  <path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z"></path>
-                </svg>
-              </a>
+              <Link href="/darbo-pasiulymai" passHref>
+                <a className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-gray-900 bg-white hover:bg-gray-50">
+                  Pasiūlymų sąrašas
+                  <svg
+                    className="-mr-1 ml-3 h-5 w-5 text-gray-400"
+                    data-todo-x-description="Heroicon name: solid/external-link"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z"></path>
+                    <path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z"></path>
+                  </svg>
+                </a>
+              </Link>
             </div>
           </div>
         </div>
