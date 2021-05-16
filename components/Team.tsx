@@ -6,7 +6,7 @@ export const Team = () => {
       <div className="mx-auto py-12 px-4 max-w-7xl sm:px-6 lg:px-8 lg:py-24">
         <div className="space-y-12 lg:grid lg:grid-cols-3 lg:gap-8 lg:space-y-0">
           <div className="space-y-5 sm:space-y-4">
-            <h2 className="text-base font-semibold tracking-wider text-indigo-600 uppercase">
+            <h2 className="text-base font-semibold tracking-wider text-pink uppercase">
               Komanda
             </h2>
             <p className="mt-2 text-3xl font-extrabold text-gray-900 tracking-tight sm:text-4xl">
@@ -29,7 +29,7 @@ export const Team = () => {
                   </div>
                   <div className="text-lg leading-6 font-medium space-y-1">
                     <h3>Dovilė</h3>
-                    <p className="text-indigo-600">CEO</p>
+                    <p className="text-pink">CEO</p>
                   </div>
 
                   <dl className="mt-8 space-y-2">
@@ -92,7 +92,7 @@ export const Team = () => {
                   </div>
                   <div className="text-lg leading-6 font-medium space-y-1">
                     <h3>Inga</h3>
-                    <p className="text-indigo-600">Head of recruitment</p>
+                    <p className="text-pink">Head of recruitment</p>
                   </div>
 
                   <dl className="mt-8 space-y-2">

@@ -5,6 +5,14 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
+      colors: {
+        pink: {
+          light: '#fff0f8',
+          DEFAULT: '#d390a8',
+          dark: '#5b404d',
+          darkest: '#3a2632',
+        },
+      },
       fontFamily: {
         sans: ['Inter var', ...defaultTheme.fontFamily.sans],
       },
@@ -17,5 +25,5 @@ module.exports = {
   variants: {
     extend: {},
   },
-  plugins: [require('@tailwindcss/forms')],
+  plugins: [require('@tailwindcss/forms'), require('@tailwindcss/typography')],
 };

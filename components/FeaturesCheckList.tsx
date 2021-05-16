@@ -8,7 +8,7 @@ export const FeaturesCheckList = () => {
       id="kodel-mes"
     >
       <div>
-        <h2 className="text-base font-semibold text-indigo-600 uppercase tracking-wide">
+        <h2 className="text-base font-semibold text-pink uppercase tracking-wide">
           Kodėl mes?
         </h2>
         <p className="mt-2 text-3xl font-extrabold text-gray-900">

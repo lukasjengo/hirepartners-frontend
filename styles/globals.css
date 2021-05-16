@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@media (min-width: 1024px) {
+  .content-area {
+    height: calc(100vh - 74px);
+  }
+}

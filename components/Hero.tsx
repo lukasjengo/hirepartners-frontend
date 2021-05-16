@@ -5,11 +5,11 @@ export const Hero = () => {
   return (
     // <div className="mx-auto max-w-7xl w-full pt-16 pb-20 text-center lg:py-48 lg:text-left">
     //   <div className="px-4 lg:w-1/2 sm:px-8 xl:pr-16">
-    <div className="flex flex-col lg:flex-row text-center lg:text-left lg:h-screen">
+    <div className="flex flex-col lg:flex-row text-center lg:text-left content-area">
       <div className="flex flex-col w-full lg:w-1/2 mx-auto my-10 sm:max-w-xl justify-center px-4">
         <h1 className="tracking-tight font-extrabold text-gray-900 text-5xl lg:text-6xl">
           <span className="block">Mes esame</span>{' '}
-          <span className="block text-indigo-600">Hire Partners</span>
+          <span className="block text-pink">Hire Partners</span>
         </h1>
         <p className="mt-6 text-lg text-gray-500 sm:text-xl md:mt-8">
           Padedam surasti talentus įmonėms, kurios neturi vidinio HR, laiko, ar
@@ -18,14 +18,14 @@ export const Hero = () => {
         <div className="mt-12 sm:flex sm:justify-center lg:justify-start">
           <div className="rounded-md shadow-md">
             <Link href="/kontaktai" passHref>
-              <a className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:text-lg">
+              <a className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-pink hover:bg-indigo-700 md:text-lg">
                 Susisiekti
               </a>
             </Link>
           </div>
           <div className="mt-3 rounded-md shadow-md sm:mt-0 sm:ml-3">
             <Link href="/#paslaugos" passHref>
-              <a className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-indigo-600 bg-white hover:bg-gray-50 md:text-lg">
+              <a className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-pink bg-white hover:bg-gray-50 md:text-lg">
                 Paslaugos
               </a>
             </Link>
@@ -64,7 +64,7 @@ export const Hero = () => {
       <div className="w-full lg:w-1/2">
         <img
           className="w-full h-144 lg:h-full object-cover object-center"
-          src="/hero-image-greybg.jpg"
+          src="/hero-image-crpt.jpg"
           alt=""
         />
         {/* <Image

@@ -14,12 +14,11 @@ export const Header = () => {
                 <Link href="/" passHref>
                   <a className="text-xl font-black">
                     <span className="sr-only">Hirepartners logo</span>
-                    {/* <img
+                    <img
                       className="h-8 w-auto sm:h-10"
-                      src=""
+                      src="hirepartners-logo.svg"
                       alt=""
-                    /> */}
-                    Logo
+                    />
                   </a>
                 </Link>
               </div>
@@ -57,7 +56,7 @@ export const Header = () => {
               </nav>
               <div className="flex items-center justify-end md:flex-1 lg:w-0">
                 <Link href="/kontaktai" passHref>
-                  <a className="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-md text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700">
+                  <a className="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-md text-base font-medium text-white bg-pink hover:bg-indigo-700">
                     Susisiekti
                   </a>
                 </Link>
@@ -93,12 +92,11 @@ export const Header = () => {
                       <Link href="/" passHref>
                         <a className="text-xl font-black">
                           <span className="sr-only">Hirepartners logo</span>
-                          {/* <img
-                      className="h-8 w-auto sm:h-10"
-                      src=""
-                      alt=""
-                    /> */}
-                          Logo
+                          <img
+                            className="h-8 w-auto sm:h-10"
+                            src="hirepartners-logo.svg"
+                            alt=""
+                          />
                         </a>
                       </Link>
                     </div>

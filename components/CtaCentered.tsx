@@ -9,7 +9,7 @@ export const CtaCentered = () => {
         <h2 className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
           <span className="block">Reikia pagalbos talentų paieškose?</span>
           <Link href="/kontaktai" passHref>
-            <a className="inline-block text-indigo-600 cursor-pointer hover:underline">
+            <a className="inline-block text-pink cursor-pointer hover:underline">
               Susisiekite su mumis
               <ArrowRightIcon className="ml-2 w-6 h-6 inline-block font-semibold" />
             </a>
