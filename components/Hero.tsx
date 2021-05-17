@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export const Hero = () => {
   return (
@@ -58,18 +59,14 @@ export const Hero = () => {
           </div>
         </div>
       </div>
-      <div className="w-full lg:w-1/2">
-        <img
-          className="w-full h-144 lg:h-full object-cover object-center"
+      <div className="relative w-full lg:w-1/2 h-144 lg:h-auto">
+        <Image
           src="/hero-image-crpt.jpg"
-          alt=""
+          layout="fill"
+          objectFit="cover"
+          objectPosition="center"
+          alt="Hirepartners dovile ir inga"
         />
-        {/* <Image
-                src="/hero-image.jpg"
-                layout="intrinsic"
-                width={1278}
-                height={1917}
-              /> */}
       </div>
     </div>
   );

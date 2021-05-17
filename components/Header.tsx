@@ -1,5 +1,6 @@
 import { Fragment } from 'react';
 import Link from 'next/link';
+
 import { Popover, Transition } from '@headlessui/react';
 import { MenuIcon, XIcon } from '@heroicons/react/outline';
 
@@ -17,12 +18,12 @@ export const Header = () => {
                     <img
                       className="h-8 w-auto sm:h-10"
                       src="hirepartners-logo.svg"
-                      alt=""
+                      alt="Hirepartners logo"
                     />
                   </a>
                 </Link>
               </div>
-              <nav className="hidden lg:flex space-x-8">
+              <nav className="hidden lg:flex space-x-5 xl:space-x-8">
                 <Link href="/#paslaugos" passHref>
                   <a className="text-base font-medium text-gray-600 hover:text-pink">
                     Paslaugos
@@ -94,7 +95,7 @@ export const Header = () => {
                           <img
                             className="h-8 w-auto sm:h-10"
                             src="hirepartners-logo.svg"
-                            alt=""
+                            alt="Hirepartners logo"
                           />
                         </a>
                       </Link>
