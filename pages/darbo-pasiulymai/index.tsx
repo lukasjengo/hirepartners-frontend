@@ -24,7 +24,7 @@ export default function DarboPasiulymai({ data }: Props) {
           Čia rasite visus aktyvius mūsų komandos kruopščiai atrinktus darbo
           pasiūlymus.
         </p>
-        <div className="mt-6 bg-pink-darkest shadow overflow-hidden sm:rounded-md">
+        <div className="mt-6 bg-pink-darkest shadow overflow-hidden rounded-md">
           <ul className="divide-y divide-pink">
             {data.map((job) => (
               <li key={job.id}>

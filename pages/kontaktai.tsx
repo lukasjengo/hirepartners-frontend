@@ -1,7 +1,7 @@
 export default function Kontaktai() {
   return (
     <div className="flex flex-col lg:flex-row max-w-7xl mx-auto mb-12 xl:mb-24">
-      <div className="max-w-lg px-4 sm:px-6 mt-10 mx-auto lg:mx-0">
+      <div className="w-full px-4 sm:px-6 mt-10 mx-auto lg:mx-0">
         <h2 className="text-2xl font-extrabold tracking-tight text-pink-darkest sm:text-3xl">
           Susisiekite su mumis
         </h2>
@@ -52,7 +52,7 @@ export default function Kontaktai() {
           </div>
         </dl>
       </div>
-      <div className="max-w-lg mx-auto lg:max-w-none">
+      <div className="w-full px-4 sm:px-6 mx-auto lg:max-w-none">
         <form
           action="#"
           method="POST"

@@ -81,7 +81,6 @@ export const Header = () => {
             leaveTo="opacity-0 scale-95"
           >
             <Popover.Panel
-              focus
               static
               className="absolute top-0 inset-x-0 z-10 p-2 transition transform origin-top-right lg:hidden"
             >
