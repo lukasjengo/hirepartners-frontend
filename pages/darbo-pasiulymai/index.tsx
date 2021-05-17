@@ -66,6 +66,12 @@ export const getStaticProps: GetStaticProps = async () => {
       'https://wpcms.hirepartners.lt/wp-json/wp/v2/darbo-pasiulymai?per_page=100&page=1'
     );
 
+  if (!data) {
+    return {
+      notFound: true,
+    };
+  }
+
   let notLastPage = headers.link.includes('rel="next');
   let allData = data;
   let newHeaders = headers;

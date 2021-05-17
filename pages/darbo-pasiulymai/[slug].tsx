@@ -114,7 +114,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
   return {
     paths,
-    fallback: false,
+    fallback: 'blocking',
   };
 };
 
@@ -123,8 +123,14 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     `https://wpcms.hirepartners.lt/wp-json/wp/v2/darbo-pasiulymai?slug=${params?.slug}`
   );
 
+  if (!data) {
+    return {
+      notFound: true,
+    };
+  }
+
   return {
     props: { data: data[0] },
-    revalidate: 15,
+    revalidate: 10,
   };
 };
