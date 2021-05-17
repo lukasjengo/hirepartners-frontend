@@ -15,38 +15,35 @@ interface Props {
 export default function DarboPasiulymai({ data }: Props) {
   const router = useRouter();
   return (
-    <div className="bg-gray-100 py-6 min-h-screen">
+    <div className="pt-10 min-h-screen">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <h1 className="mt-2 text-3xl font-extrabold text-gray-900 tracking-tight sm:text-4xl">
+        <h1 className="mt-2 text-3xl font-extrabold text-pink-darkest tracking-tight sm:text-4xl">
           Darbo pasiūlymai
         </h1>
-        <div className="mt-6 bg-white shadow overflow-hidden sm:rounded-md">
-          <ul className="divide-y divide-gray-200">
+        <p className="mt-5 max-w-prose text-xl text-gray-500">
+          Čia rasite visus aktyvius mūsų komandos kruopščiai atrinktus darbo
+          pasiūlymus.
+        </p>
+        <div className="mt-6 bg-pink-darkest shadow overflow-hidden sm:rounded-md">
+          <ul className="divide-y divide-pink">
             {data.map((job) => (
               <li key={job.id}>
                 <Link href={`${router.pathname}/${job.slug}`} passHref>
-                  <a className="block hover:bg-gray-50">
+                  <a className="block hover:bg-pink-dark transition-colors">
                     <div className="px-4 py-4 sm:px-6">
                       <div className="flex items-center justify-between">
-                        <p className="text-sm font-medium text-indigo-600 truncate capitalize">
+                        <p className="text-sm font-medium text-pink truncate capitalize">
                           {job.title.rendered.toLowerCase()}
                         </p>
-                        {job.acf.featured && (
-                          <div className="ml-2 flex-shrink-0 flex">
-                            <p className="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-pink-100 text-pink-800">
-                              Populiarus
-                            </p>
-                          </div>
-                        )}
                       </div>
                       <div className="mt-2 flex justify-between">
                         <div className="flex">
-                          <p className="flex items-center text-sm text-gray-500">
+                          <p className="flex items-center text-sm text-white opacity-90">
                             <LocationMarkerIcon className="flex-shrink-0 mr-1.5 h-5 w-5 text-gray-400" />
                             {job.acf.location}
                           </p>
                         </div>
-                        <div className="mt-2 flex items-center text-sm text-gray-500">
+                        <div className="mt-2 flex items-center text-sm text-white opacity-90">
                           <CurrencyEuroIcon className="flex-shrink-0 mr-1.5 h-5 w-5 text-gray-400" />
                           <p>From {job.acf.monthly_salary} Eur</p>
                         </div>

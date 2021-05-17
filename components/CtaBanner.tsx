@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 export const CtaBanner = () => {
   return (
-    <div className="relative bg-indigo-700">
+    <div className="relative bg-pink-dark">
       <div className="h-56 sm:h-72 md:absolute md:left-0 md:h-full md:w-1/2">
         <img
           className="w-full h-full object-cover object-center"
@@ -13,7 +13,7 @@ export const CtaBanner = () => {
       </div>
       <div className="relative max-w-7xl mx-auto px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
         <div className="md:ml-auto md:w-1/2 md:pl-10">
-          <h2 className="text-base font-semibold uppercase tracking-wider text-gray-300">
+          <h2 className="text-base font-semibold uppercase tracking-wider text-pink">
             Darbo pasiūlymai
           </h2>
           <p className="mt-2 text-white text-3xl font-extrabold tracking-tight sm:text-4xl">
@@ -22,7 +22,8 @@ export const CtaBanner = () => {
           <div className="mt-8">
             <div className="inline-flex rounded-md shadow">
               <Link href="/darbo-pasiulymai" passHref>
-                <a className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-gray-900 bg-white hover:bg-gray-50">
+                {/* border border-pink text-base font-medium rounded-md text-pink-dark hover:text-pink md:text-lg transition-colors */}
+                <a className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-pink-darkest bg-white hover:text-pink transition-colors">
                   Pasiūlymų sąrašas
                   <svg
                     className="-mr-1 ml-3 h-5 w-5 text-gray-400"

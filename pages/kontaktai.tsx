@@ -1,8 +1,8 @@
 export default function Kontaktai() {
   return (
     <div className="flex flex-col lg:flex-row max-w-7xl mx-auto mb-12 xl:mb-24">
-      <div className="max-w-lg px-4 sm:px-6 mt-14 mx-auto lg:mx-0">
-        <h2 className="text-2xl font-extrabold tracking-tight text-gray-900 sm:text-3xl">
+      <div className="max-w-lg px-4 sm:px-6 mt-10 mx-auto lg:mx-0">
+        <h2 className="text-2xl font-extrabold tracking-tight text-pink-darkest sm:text-3xl">
           Susisiekite su mumis
         </h2>
         <dl className="mt-8 text-base text-gray-500">
@@ -71,7 +71,7 @@ export default function Kontaktai() {
                 name="first_name"
                 id="first_name"
                 autoComplete="given-name"
-                className="block w-full shadow-sm sm:text-sm focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
+                className="block w-full shadow-sm sm:text-sm focus:ring-pink focus:border-pink border-gray-300 rounded-md"
               />
             </div>
           </div>
@@ -88,7 +88,7 @@ export default function Kontaktai() {
                 name="last_name"
                 id="last_name"
                 autoComplete="family-name"
-                className="block w-full shadow-sm sm:text-sm focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
+                className="block w-full shadow-sm sm:text-sm focus:ring-pink focus:border-pink border-gray-300 rounded-md"
               />
             </div>
           </div>
@@ -105,7 +105,7 @@ export default function Kontaktai() {
                 name="email"
                 type="email"
                 autoComplete="email"
-                className="block w-full shadow-sm sm:text-sm focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
+                className="block w-full shadow-sm sm:text-sm focus:ring-pink focus:border-pink border-gray-300 rounded-md"
               />
             </div>
           </div>
@@ -122,7 +122,7 @@ export default function Kontaktai() {
                 name="company"
                 id="company"
                 autoComplete="organization"
-                className="block w-full shadow-sm sm:text-sm focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
+                className="block w-full shadow-sm sm:text-sm focus:ring-pink focus:border-pink border-gray-300 rounded-md"
               />
             </div>
           </div>
@@ -145,7 +145,7 @@ export default function Kontaktai() {
                 id="phone"
                 autoComplete="tel"
                 aria-describedby="phone_description"
-                className="block w-full shadow-sm sm:text-sm focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
+                className="block w-full shadow-sm sm:text-sm focus:ring-pink focus:border-pink border-gray-300 rounded-md"
               />
             </div>
           </div>
@@ -155,14 +155,8 @@ export default function Kontaktai() {
                 htmlFor="how_can_we_help"
                 className="block text-sm font-medium text-gray-700"
               >
-                Kaip galėtume Jums padėti?
+                Jūsų žinutė
               </label>
-              <span
-                id="how_can_we_help_description"
-                className="text-sm text-gray-500"
-              >
-                Max. 500 ženklų
-              </span>
             </div>
             <div className="mt-1">
               <textarea
@@ -170,14 +164,14 @@ export default function Kontaktai() {
                 name="how_can_we_help"
                 aria-describedby="how_can_we_help_description"
                 rows={4}
-                className="block w-full shadow-sm sm:text-sm focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
+                className="block w-full shadow-sm sm:text-sm focus:ring-pink focus:border-pink border-gray-300 rounded-md"
               ></textarea>
             </div>
           </div>
           <div className="text-right sm:col-span-2">
             <button
               type="submit"
-              className="inline-flex justify-center py-2 px-4 border border-transparent text-sm font-medium shadow-md rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+              className="inline-flex justify-center py-2 px-4 border border-transparent text-sm font-medium shadow-md rounded-md text-white bg-pink focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-pink hover:opacity-90 transition-opacity"
             >
               Siųsti
             </button>

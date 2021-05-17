@@ -9,7 +9,7 @@ export const Team = () => {
             <h2 className="text-base font-semibold tracking-wider text-pink uppercase">
               Komanda
             </h2>
-            <p className="mt-2 text-3xl font-extrabold text-gray-900 tracking-tight sm:text-4xl">
+            <p className="mt-2 text-3xl font-extrabold text-pink-darkest tracking-tight sm:text-4xl">
               Mūsų komanda
             </p>
           </div>
@@ -20,13 +20,11 @@ export const Team = () => {
             >
               <li>
                 <div className="space-y-4">
-                  <div className="aspect-w-3 aspect-h-2">
-                    <img
-                      className="object-cover shadow-lg rounded-lg"
-                      src="/dovile-profile-opt.jpg"
-                      alt=""
-                    />
-                  </div>
+                  <img
+                    className="object-cover shadow-lg rounded-lg"
+                    src="/dovile-profile-crptopt.jpg"
+                    alt=""
+                  />
                   <div className="text-lg leading-6 font-medium space-y-1">
                     <h3>Dovilė</h3>
                     <p className="text-pink">CEO</p>
@@ -38,7 +36,7 @@ export const Team = () => {
                     </dt>
                     <dd className="flex text-base text-gray-500">
                       <svg
-                        className="flex-shrink-0 w-6 h-6 text-gray-500"
+                        className="flex-shrink-0 w-6 h-6 text-gray-400"
                         data-todo-x-description="Heroicon name: outline/phone"
                         xmlns="http://www.w3.org/2000/svg"
                         fill="none"
@@ -60,7 +58,7 @@ export const Team = () => {
                     </dt>
                     <dd className="flex text-base text-gray-500">
                       <svg
-                        className="flex-shrink-0 w-6 h-6 text-gray-500"
+                        className="flex-shrink-0 w-6 h-6 text-gray-400"
                         data-todo-x-description="Heroicon name: outline/mail"
                         xmlns="http://www.w3.org/2000/svg"
                         fill="none"
@@ -83,13 +81,11 @@ export const Team = () => {
 
               <li>
                 <div className="space-y-4">
-                  <div className="aspect-w-3 aspect-h-2">
-                    <img
-                      className="object-cover shadow-lg rounded-lg"
-                      src="/inga-profile-opt.jpg"
-                      alt=""
-                    />
-                  </div>
+                  <img
+                    className="object-cover shadow-lg rounded-lg"
+                    src="/inga-profile-crptopt.jpg"
+                    alt=""
+                  />
                   <div className="text-lg leading-6 font-medium space-y-1">
                     <h3>Inga</h3>
                     <p className="text-pink">Head of recruitment</p>
@@ -101,7 +97,7 @@ export const Team = () => {
                     </dt>
                     <dd className="flex text-base text-gray-500">
                       <svg
-                        className="flex-shrink-0 w-6 h-6 text-gray-500"
+                        className="flex-shrink-0 w-6 h-6 text-gray-400"
                         data-todo-x-description="Heroicon name: outline/phone"
                         xmlns="http://www.w3.org/2000/svg"
                         fill="none"
@@ -123,7 +119,7 @@ export const Team = () => {
                     </dt>
                     <dd className="flex text-base text-gray-500">
                       <svg
-                        className="flex-shrink-0 w-6 h-6 text-gray-500"
+                        className="flex-shrink-0 w-6 h-6 text-gray-400"
                         data-todo-x-description="Heroicon name: outline/mail"
                         xmlns="http://www.w3.org/2000/svg"
                         fill="none"

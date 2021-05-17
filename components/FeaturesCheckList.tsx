@@ -11,7 +11,7 @@ export const FeaturesCheckList = () => {
         <h2 className="text-base font-semibold text-pink uppercase tracking-wide">
           Kodėl mes?
         </h2>
-        <p className="mt-2 text-3xl font-extrabold text-gray-900">
+        <p className="mt-2 text-3xl font-extrabold text-pink-darkest">
           Mus rinktis verta
         </p>
       </div>
@@ -20,7 +20,7 @@ export const FeaturesCheckList = () => {
           <div className="flex">
             <CheckCircleIcon className="text-green-500 h-6 w-6 flex-shrink-0" />
             <div className="ml-3">
-              <dt className="text-lg leading-6 font-medium text-gray-900">
+              <dt className="text-lg leading-6 font-medium text-pink-darkest">
                 Nėra rizikų
               </dt>
             </div>
@@ -29,7 +29,7 @@ export const FeaturesCheckList = () => {
           <div className="flex">
             <CheckCircleIcon className="text-green-500 h-6 w-6 flex-shrink-0" />
             <div className="ml-3">
-              <dt className="text-lg leading-6 font-medium text-gray-900">
+              <dt className="text-lg leading-6 font-medium text-pink-darkest">
                 Atsiskaitymas tik už rezultatą
               </dt>
             </div>
@@ -38,7 +38,7 @@ export const FeaturesCheckList = () => {
           <div className="flex">
             <CheckCircleIcon className="text-green-500 h-6 w-6 flex-shrink-0" />
             <div className="ml-3">
-              <dt className="text-lg leading-6 font-medium text-gray-900">
+              <dt className="text-lg leading-6 font-medium text-pink-darkest">
                 Konkurencinga kaina
               </dt>
             </div>
@@ -47,7 +47,7 @@ export const FeaturesCheckList = () => {
           <div className="flex">
             <CheckCircleIcon className="text-green-500 h-6 w-6 flex-shrink-0" />
             <div className="ml-3">
-              <dt className="text-lg leading-6 font-medium text-gray-900">
+              <dt className="text-lg leading-6 font-medium text-pink-darkest">
                 Nemokamas darbuotojo pakeitimas nesėkmės atveju
               </dt>
             </div>
@@ -56,7 +56,7 @@ export const FeaturesCheckList = () => {
           <div className="flex">
             <CheckCircleIcon className="text-green-500 h-6 w-6 flex-shrink-0" />
             <div className="ml-3">
-              <dt className="text-lg leading-6 font-medium text-gray-900">
+              <dt className="text-lg leading-6 font-medium text-pink-darkest">
                 Greitis ir kokybė
               </dt>
             </div>
@@ -65,7 +65,7 @@ export const FeaturesCheckList = () => {
           <div className="flex">
             <CheckCircleIcon className="text-green-500 h-6 w-6 flex-shrink-0" />
             <div className="ml-3">
-              <dt className="text-lg leading-6 font-medium text-gray-900">
+              <dt className="text-lg leading-6 font-medium text-pink-darkest">
                 Paslaugų lankstumas
               </dt>
             </div>
@@ -74,7 +74,7 @@ export const FeaturesCheckList = () => {
           <div className="flex">
             <CheckCircleIcon className="text-green-500 h-6 w-6 flex-shrink-0" />
             <div className="ml-3">
-              <dt className="text-lg leading-6 font-medium text-gray-900">
+              <dt className="text-lg leading-6 font-medium text-pink-darkest">
                 Konfidencialumo užtikrinimas
               </dt>
             </div>
@@ -83,8 +83,9 @@ export const FeaturesCheckList = () => {
           <div className="flex">
             <CheckCircleIcon className="text-green-500 h-6 w-6 flex-shrink-0" />
             <div className="ml-3">
-              <dt className="text-lg leading-6 font-medium text-gray-900">
-                Siūlome 50% mažesnį tarifą pirmajam darbuotojui
+              <dt className="text-lg leading-6 font-medium text-pink-darkest">
+                Ilgalaikiui bendradarbiavimui siūlome 50% mažesnį tarifą
+                pirmajam darbuotojui
               </dt>
             </div>
           </div>

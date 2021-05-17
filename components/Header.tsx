@@ -24,45 +24,45 @@ export const Header = () => {
               </div>
               <nav className="hidden lg:flex space-x-8">
                 <Link href="/#paslaugos" passHref>
-                  <a className="text-base font-medium text-gray-600 hover:text-indigo-500">
+                  <a className="text-base font-medium text-gray-600 hover:text-pink">
                     Paslaugos
                   </a>
                 </Link>
                 <Link href="/#kodel-mes" passHref>
-                  <a className="text-base font-medium text-gray-600 hover:text-indigo-500">
+                  <a className="text-base font-medium text-gray-600 hover:text-pink">
                     Kodėl mes?
                   </a>
                 </Link>
                 <Link href="/darbo-pasiulymai" passHref>
-                  <a className="text-base font-medium text-gray-600 hover:text-indigo-500">
+                  <a className="text-base font-medium text-gray-600 hover:text-pink">
                     Darbo pasiūlymai
                   </a>
                 </Link>
                 <Link href="/blogas" passHref>
-                  <a className="text-base font-medium text-gray-600 hover:text-indigo-500">
+                  <a className="text-base font-medium text-gray-600 hover:text-pink">
                     Blogas
                   </a>
                 </Link>
                 <Link href="/#apie-mus" passHref>
-                  <a className="text-base font-medium text-gray-600 hover:text-indigo-500">
+                  <a className="text-base font-medium text-gray-600 hover:text-pink">
                     Apie mus
                   </a>
                 </Link>
                 <Link href="/#komanda" passHref>
-                  <a className="text-base font-medium text-gray-600 hover:text-indigo-500">
+                  <a className="text-base font-medium text-gray-600 hover:text-pink">
                     Komanda
                   </a>
                 </Link>
               </nav>
               <div className="flex items-center justify-end md:flex-1 lg:w-0">
                 <Link href="/kontaktai" passHref>
-                  <a className="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-md text-base font-medium text-white bg-pink hover:bg-indigo-700">
+                  <a className="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-md text-base font-medium text-white bg-pink hover:opacity-95 transition-opacity">
                     Susisiekti
                   </a>
                 </Link>
               </div>
               <div className="lg:hidden">
-                <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-600 hover:bg-indigo-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-300">
+                <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-pink-dark hover:bg-pink-light focus:outline-none focus:ring-2 focus:ring-inset focus:ring-pink-dark">
                   <span className="sr-only">Open menu</span>
                   <MenuIcon className="h-6 w-6" aria-hidden="true" />
                 </Popover.Button>
@@ -101,7 +101,7 @@ export const Header = () => {
                       </Link>
                     </div>
                     <div className="ml-auto">
-                      <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-600 hover:bg-indigo-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-300">
+                      <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-pink-dark hover:bg-pink-light focus:outline-none focus:ring-2 focus:ring-inset focus:ring-pink-dark">
                         <span className="sr-only">Close menu</span>
                         <XIcon className="h-6 w-6" aria-hidden="true" />
                       </Popover.Button>
@@ -110,32 +110,32 @@ export const Header = () => {
                 </div>
                 <div className="py-6 px-5 flex sm:justify-between flex-col sm:flex-row">
                   <Link href="/#paslaugos" passHref>
-                    <a className="text-base font-medium text-gray-600 hover:text-indigo-500 mb-2">
+                    <a className="text-base font-medium text-gray-600 hover:text-pink mb-2">
                       Paslaugos
                     </a>
                   </Link>
                   <Link href="/#kodel-mes" passHref>
-                    <a className="text-base font-medium text-gray-600 hover:text-indigo-500 mb-2">
+                    <a className="text-base font-medium text-gray-600 hover:text-pink mb-2">
                       Kodėl mes?
                     </a>
                   </Link>
                   <Link href="/darbo-pasiulymai" passHref>
-                    <a className="text-base font-medium text-gray-600 hover:text-indigo-500 mb-2">
+                    <a className="text-base font-medium text-gray-600 hover:text-pink mb-2">
                       Darbo pasiūlymai
                     </a>
                   </Link>
                   <Link href="/blogas" passHref>
-                    <a className="text-base font-medium text-gray-600 hover:text-indigo-500 mb-2">
+                    <a className="text-base font-medium text-gray-600 hover:text-pink mb-2">
                       Blogas
                     </a>
                   </Link>
                   <Link href="/#apie-mus" passHref>
-                    <a className="text-base font-medium text-gray-600 hover:text-indigo-500 mb-2">
+                    <a className="text-base font-medium text-gray-600 hover:text-pink mb-2">
                       Apie mus
                     </a>
                   </Link>
                   <Link href="/#komanda" passHref>
-                    <a className="text-base font-medium text-gray-600 hover:text-indigo-500 mb-2">
+                    <a className="text-base font-medium text-gray-600 hover:text-pink mb-2">
                       Komanda
                     </a>
                   </Link>

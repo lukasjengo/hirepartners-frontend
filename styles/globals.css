@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 @media (min-width: 1024px) {
-  .content-area {
+  .screenheight-nonav {
     height: calc(100vh - 74px);
   }
 }
