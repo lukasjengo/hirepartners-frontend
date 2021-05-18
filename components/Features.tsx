@@ -7,7 +7,7 @@ import React from 'react';
 
 export const Features = () => {
   return (
-    <div className="py-16 md:py-24 lg:py-32" id="paslaugos">
+    <div className="py-20 md:py-24 lg:py-32" id="paslaugos">
       <div className="mx-auto max-w-md px-4 text-center sm:max-w-4xl sm:px-6 lg:px-8 lg:max-w-7xl">
         <h2 className="text-base font-semibold tracking-wider text-pink uppercase">
           Paslaugos
@@ -21,7 +21,7 @@ export const Features = () => {
               <div className="flow-root bg-gray-50 rounded-lg px-6 pb-8">
                 <div className="-mt-6">
                   <div>
-                    <span className="inline-flex items-center justify-center p-3 bg-pink rounded-md shadow-lg">
+                    <span className="inline-flex items-center justify-center p-3 bg-pink-dark rounded-md shadow-lg">
                       <UserGroupIcon className="h-6 w-6 text-white" />
                     </span>
                   </div>
@@ -41,7 +41,7 @@ export const Features = () => {
               <div className="flow-root bg-gray-50 rounded-lg px-6 pb-8">
                 <div className="-mt-6">
                   <div>
-                    <span className="inline-flex items-center justify-center p-3 bg-pink rounded-md shadow-lg">
+                    <span className="inline-flex items-center justify-center p-3 bg-pink-dark rounded-md shadow-lg">
                       <ClipboardListIcon className="h-6 w-6 text-white" />
                     </span>
                   </div>
@@ -61,7 +61,7 @@ export const Features = () => {
               <div className="flow-root bg-gray-50 rounded-lg px-6 pb-8">
                 <div className="-mt-6">
                   <div>
-                    <span className="inline-flex items-center justify-center p-3 bg-pink rounded-md shadow-lg">
+                    <span className="inline-flex items-center justify-center p-3 bg-pink-dark rounded-md shadow-lg">
                       <OfficeBuildingIcon className="h-6 w-6 text-white" />
                     </span>
                   </div>

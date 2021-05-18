@@ -39,11 +39,11 @@ export const Header = () => {
                     Darbo pasiūlymai
                   </a>
                 </Link>
-                <Link href="/blogas" passHref>
+                {/* <Link href="/blogas" passHref>
                   <a className="text-base font-medium text-gray-600 hover:text-pink">
                     Blogas
                   </a>
-                </Link>
+                </Link> */}
                 <Link href="/#apie-mus" passHref>
                   <a className="text-base font-medium text-gray-600 hover:text-pink">
                     Apie mus
@@ -57,14 +57,14 @@ export const Header = () => {
               </nav>
               <div className="flex items-center justify-end md:flex-1 lg:w-0">
                 <Link href="/kontaktai" passHref>
-                  <a className="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-md text-base font-medium text-white bg-pink hover:opacity-95 transition-opacity">
+                  <a className="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-md text-base font-medium text-white bg-pink-dark hover:opacity-95 transition-opacity">
                     Susisiekti
                   </a>
                 </Link>
               </div>
               <div className="lg:hidden">
                 <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-pink-dark hover:bg-pink-light focus:outline-none focus:ring-2 focus:ring-inset focus:ring-pink-dark">
-                  <span className="sr-only">Open menu</span>
+                  <span className="sr-only">Atidaryti meniu</span>
                   <MenuIcon className="h-6 w-6" aria-hidden="true" />
                 </Popover.Button>
               </div>
@@ -89,16 +89,18 @@ export const Header = () => {
                 <div className="pt-3 pb-2 px-5">
                   <div className="flex items-center">
                     <div className="flex justify-start flex-1">
-                      <Link href="/" passHref>
-                        <a className="text-xl font-black">
-                          <span className="sr-only">Hirepartners logo</span>
-                          <img
-                            className="h-8 w-auto sm:h-10"
-                            src="hirepartners-logo.svg"
-                            alt="Hirepartners logo"
-                          />
-                        </a>
-                      </Link>
+                      <Popover.Button as="div">
+                        <Link href="/" passHref>
+                          <a>
+                            <span className="sr-only">Hirepartners logo</span>
+                            <img
+                              className="h-8 w-auto sm:h-10"
+                              src="hirepartners-logo.svg"
+                              alt="Hirepartners logo"
+                            />
+                          </a>
+                        </Link>
+                      </Popover.Button>
                     </div>
                     <div className="ml-auto">
                       <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-pink-dark hover:bg-pink-light focus:outline-none focus:ring-2 focus:ring-inset focus:ring-pink-dark">
@@ -108,37 +110,49 @@ export const Header = () => {
                     </div>
                   </div>
                 </div>
-                <div className="py-6 px-5 flex sm:justify-between flex-col sm:flex-row">
-                  <Link href="/#paslaugos" passHref>
-                    <a className="text-base font-medium text-gray-600 hover:text-pink mb-2">
-                      Paslaugos
-                    </a>
-                  </Link>
-                  <Link href="/#kodel-mes" passHref>
-                    <a className="text-base font-medium text-gray-600 hover:text-pink mb-2">
-                      Kodėl mes?
-                    </a>
-                  </Link>
-                  <Link href="/darbo-pasiulymai" passHref>
-                    <a className="text-base font-medium text-gray-600 hover:text-pink mb-2">
-                      Darbo pasiūlymai
-                    </a>
-                  </Link>
-                  <Link href="/blogas" passHref>
-                    <a className="text-base font-medium text-gray-600 hover:text-pink mb-2">
-                      Blogas
-                    </a>
-                  </Link>
-                  <Link href="/#apie-mus" passHref>
-                    <a className="text-base font-medium text-gray-600 hover:text-pink mb-2">
-                      Apie mus
-                    </a>
-                  </Link>
-                  <Link href="/#komanda" passHref>
-                    <a className="text-base font-medium text-gray-600 hover:text-pink mb-2">
-                      Komanda
-                    </a>
-                  </Link>
+                <div className="py-6 px-5 flex items-start sm:justify-between flex-col sm:flex-row">
+                  <Popover.Button as="div" className="mb-1">
+                    <Link href="/#paslaugos" passHref>
+                      <a className="text-base font-medium text-gray-600 hover:text-pink">
+                        Paslaugos
+                      </a>
+                    </Link>
+                  </Popover.Button>
+                  <Popover.Button as="div" className="mb-1">
+                    <Link href="/#kodel-mes" passHref>
+                      <a className="text-base font-medium text-gray-600 hover:text-pink">
+                        Kodėl mes?
+                      </a>
+                    </Link>
+                  </Popover.Button>
+                  <Popover.Button as="div" className="mb-1">
+                    <Link href="/darbo-pasiulymai" passHref>
+                      <a className="text-base font-medium text-gray-600 hover:text-pink">
+                        Darbo pasiūlymai
+                      </a>
+                    </Link>
+                  </Popover.Button>
+                  {/* <Popover.Button as="div" className="mb-1">
+                    <Link href="/blogas" passHref>
+                      <a className="text-base font-medium text-gray-600 hover:text-pink">
+                        Blogas
+                      </a>
+                    </Link>
+                  </Popover.Button> */}
+                  <Popover.Button as="div" className="mb-1">
+                    <Link href="/#apie-mus" passHref>
+                      <a className="text-base font-medium text-gray-600 hover:text-pink">
+                        Apie mus
+                      </a>
+                    </Link>
+                  </Popover.Button>
+                  <Popover.Button as="div">
+                    <Link href="/#komanda" passHref>
+                      <a className="text-base font-medium text-gray-600 hover:text-pink">
+                        Komanda
+                      </a>
+                    </Link>
+                  </Popover.Button>
                 </div>
               </div>
             </Popover.Panel>

@@ -3,7 +3,7 @@ import React from 'react';
 
 export const AboutSection = () => {
   return (
-    <div className="relative py-16 sm:py-24 lg:py-32" id="apie-mus">
+    <div className="relative py-20 sm:py-24 lg:py-32" id="apie-mus">
       <div className="mx-auto max-w-md px-4 text-center sm:max-w-4xl sm:px-6 lg:px-8 lg:max-w-7xl">
         <h2 className="text-base font-semibold tracking-wider text-pink uppercase">
           Apie mus
@@ -21,7 +21,7 @@ export const AboutSection = () => {
               <div className="flow-root bg-gray-50 rounded-lg px-6 pb-8">
                 <div className="-mt-6">
                   <div>
-                    <span className="inline-flex items-center justify-center p-3 bg-pink rounded-md shadow-lg">
+                    <span className="inline-flex items-center justify-center p-3 bg-pink-dark rounded-md shadow-lg">
                       <CheckIcon className="h-6 w-6 text-white" />
                     </span>
                   </div>
@@ -40,7 +40,7 @@ export const AboutSection = () => {
               <div className="flow-root bg-gray-50 rounded-lg px-6 pb-8">
                 <div className="-mt-6">
                   <div>
-                    <span className="inline-flex items-center justify-center p-3 bg-pink rounded-md shadow-lg">
+                    <span className="inline-flex items-center justify-center p-3 bg-pink-dark rounded-md shadow-lg">
                       <CheckIcon className="h-6 w-6 text-white" />
                     </span>
                   </div>
@@ -59,7 +59,7 @@ export const AboutSection = () => {
               <div className="flow-root bg-gray-50 rounded-lg px-6 pb-8">
                 <div className="-mt-6">
                   <div>
-                    <span className="inline-flex items-center justify-center p-3 bg-pink rounded-md shadow-lg">
+                    <span className="inline-flex items-center justify-center p-3 bg-pink-dark rounded-md shadow-lg">
                       <CheckIcon className="h-6 w-6 text-white" />
                     </span>
                   </div>

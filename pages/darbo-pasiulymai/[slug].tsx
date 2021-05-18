@@ -3,12 +3,13 @@ import axios from 'axios';
 
 import { LocationMarkerIcon } from '@heroicons/react/outline';
 
-import { JobResponse } from 'types/Job';
 import {
   getTextBetweenSymbols,
   removeAllWhiteSpace,
   splitAtLinebreaks,
 } from 'utils/stringUtils';
+
+import { JobResponse } from 'types/Job';
 
 interface Props {
   data: JobResponse;

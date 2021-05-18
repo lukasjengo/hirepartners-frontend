@@ -4,7 +4,7 @@ import React from 'react';
 export const FeaturesCheckList = () => {
   return (
     <div
-      className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:py-24 lg:px-8 lg:grid lg:grid-cols-3 lg:gap-x-8"
+      className="max-w-7xl mx-auto py-20 px-4 sm:px-6 lg:py-24 lg:px-8 lg:grid lg:grid-cols-3 lg:gap-x-8"
       id="kodel-mes"
     >
       <div>
@@ -18,7 +18,7 @@ export const FeaturesCheckList = () => {
       <div className="mt-16 lg:mt-0 lg:col-span-2">
         <dl className="space-y-10 sm:space-y-0 sm:grid sm:grid-cols-2 sm:grid-rows-4 sm:grid-flow-col sm:gap-x-6 sm:gap-y-6 lg:gap-x-8">
           <div className="flex">
-            <CheckCircleIcon className="text-green-500 h-6 w-6 flex-shrink-0" />
+            <CheckCircleIcon className="text-pink-dark h-6 w-6 flex-shrink-0" />
             <div className="ml-3">
               <dt className="text-lg leading-6 font-medium text-pink-darkest">
                 Nėra rizikų
@@ -27,7 +27,7 @@ export const FeaturesCheckList = () => {
           </div>
 
           <div className="flex">
-            <CheckCircleIcon className="text-green-500 h-6 w-6 flex-shrink-0" />
+            <CheckCircleIcon className="text-pink-dark h-6 w-6 flex-shrink-0" />
             <div className="ml-3">
               <dt className="text-lg leading-6 font-medium text-pink-darkest">
                 Atsiskaitymas tik už rezultatą
@@ -36,7 +36,7 @@ export const FeaturesCheckList = () => {
           </div>
 
           <div className="flex">
-            <CheckCircleIcon className="text-green-500 h-6 w-6 flex-shrink-0" />
+            <CheckCircleIcon className="text-pink-dark h-6 w-6 flex-shrink-0" />
             <div className="ml-3">
               <dt className="text-lg leading-6 font-medium text-pink-darkest">
                 Konkurencinga kaina
@@ -45,7 +45,7 @@ export const FeaturesCheckList = () => {
           </div>
 
           <div className="flex">
-            <CheckCircleIcon className="text-green-500 h-6 w-6 flex-shrink-0" />
+            <CheckCircleIcon className="text-pink-dark h-6 w-6 flex-shrink-0" />
             <div className="ml-3">
               <dt className="text-lg leading-6 font-medium text-pink-darkest">
                 Nemokamas darbuotojo pakeitimas nesėkmės atveju
@@ -54,7 +54,7 @@ export const FeaturesCheckList = () => {
           </div>
 
           <div className="flex">
-            <CheckCircleIcon className="text-green-500 h-6 w-6 flex-shrink-0" />
+            <CheckCircleIcon className="text-pink-dark h-6 w-6 flex-shrink-0" />
             <div className="ml-3">
               <dt className="text-lg leading-6 font-medium text-pink-darkest">
                 Greitis ir kokybė
@@ -63,7 +63,7 @@ export const FeaturesCheckList = () => {
           </div>
 
           <div className="flex">
-            <CheckCircleIcon className="text-green-500 h-6 w-6 flex-shrink-0" />
+            <CheckCircleIcon className="text-pink-dark h-6 w-6 flex-shrink-0" />
             <div className="ml-3">
               <dt className="text-lg leading-6 font-medium text-pink-darkest">
                 Paslaugų lankstumas
@@ -72,7 +72,7 @@ export const FeaturesCheckList = () => {
           </div>
 
           <div className="flex">
-            <CheckCircleIcon className="text-green-500 h-6 w-6 flex-shrink-0" />
+            <CheckCircleIcon className="text-pink-dark h-6 w-6 flex-shrink-0" />
             <div className="ml-3">
               <dt className="text-lg leading-6 font-medium text-pink-darkest">
                 Konfidencialumo užtikrinimas
@@ -81,7 +81,7 @@ export const FeaturesCheckList = () => {
           </div>
 
           <div className="flex">
-            <CheckCircleIcon className="text-green-500 h-6 w-6 flex-shrink-0" />
+            <CheckCircleIcon className="text-pink-dark h-6 w-6 flex-shrink-0" />
             <div className="ml-3">
               <dt className="text-lg leading-6 font-medium text-pink-darkest">
                 Ilgalaikiui bendradarbiavimui siūlome 50% mažesnį tarifą

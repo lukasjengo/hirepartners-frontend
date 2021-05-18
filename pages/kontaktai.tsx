@@ -12,14 +12,18 @@ export default function Kontaktai() {
             <dt className="sr-only">Telefono numeris</dt>
             <dd className="flex">
               <PhoneIcon className="flex-shrink-0 h-6 w-6 text-gray-400" />
-              <span className="ml-3">+370 626 96616</span>
+              <a href="tel:+37062696616" className="ml-3">
+                +370 626 96616
+              </a>
             </dd>
           </div>
           <div className="mt-3">
             <dt className="sr-only">Elektroninis paštas</dt>
             <dd className="flex">
               <MailIcon className="flex-shrink-0 h-6 w-6 text-gray-400" />
-              <span className="ml-3">info@hirepartners.lt</span>
+              <a href="mailto:info@hirepartners.lt" className="ml-3">
+                info@hirepartners.lt
+              </a>
             </dd>
           </div>
         </dl>
