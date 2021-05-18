@@ -86,7 +86,7 @@ export default function Dev({ data }: Props) {
 export const getStaticPaths: GetStaticPaths = async () => {
   const { data, headers }: { data: JobResponse[]; headers: any } =
     await axios.get(
-      'https://wpcms.hirepartners.lt/wp-json/wp/v2/darbo-pasiulymai?per_page=100&page=1'
+      `${process.env.NEXT_PUBLIC_WP_API_URL}/darbo-pasiulymai?per_page=100&page=1`
     );
 
   let notLastPage = headers.link.includes('rel="next');
@@ -121,7 +121,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   const { data }: { data: JobResponse[] } = await axios.get(
-    `https://wpcms.hirepartners.lt/wp-json/wp/v2/darbo-pasiulymai?slug=${params?.slug}`
+    `${process.env.NEXT_PUBLIC_WP_API_URL}/darbo-pasiulymai?slug=${params?.slug}`
   );
 
   if (!data) {
