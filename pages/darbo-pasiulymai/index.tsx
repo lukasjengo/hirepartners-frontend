@@ -63,7 +63,7 @@ export default function DarboPasiulymai({ data }: Props) {
 export const getStaticProps: GetStaticProps = async () => {
   const { data, headers }: { data: JobResponse[]; headers: any } =
     await axios.get(
-      `${process.env.NEXT_PUBLIC_WP_API_URL}/darbo-pasiulymai?per_page=100&page=1`
+      `${process.env.NEXT_PUBLIC_WP_API_URL}/wp/v2/darbo-pasiulymai?per_page=100&page=1`
     );
 
   if (!data) {

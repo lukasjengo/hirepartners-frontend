@@ -7,3 +7,7 @@
     height: calc(100vh - 74px);
   }
 }
+
+.screenheight-nonav--allsizes {
+  height: calc(100vh - 74px);
+}
