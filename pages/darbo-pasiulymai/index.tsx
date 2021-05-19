@@ -25,35 +25,41 @@ export default function DarboPasiulymai({ data }: Props) {
           pasiūlymus.
         </p>
         <div className="mt-6 bg-pink-darkest shadow overflow-hidden rounded-md">
-          <ul className="divide-y divide-pink">
-            {data.map((job) => (
-              <li key={job.id}>
-                <Link href={`${router.pathname}/${job.slug}`} passHref>
-                  <a className="block hover:bg-pink-dark transition-colors">
-                    <div className="px-4 py-4 sm:px-6">
-                      <div className="flex items-center justify-between">
-                        <p className="text-sm font-medium text-pink truncate capitalize">
-                          {job.title.rendered.toLowerCase()}
-                        </p>
-                      </div>
-                      <div className="mt-2 flex justify-between">
-                        <div className="flex">
-                          <p className="flex items-center text-sm text-white opacity-90">
-                            <LocationMarkerIcon className="flex-shrink-0 mr-1.5 h-5 w-5 text-gray-400" />
-                            {job.acf.location}
+          {data.length ? (
+            <ul className="divide-y divide-pink">
+              {data.map((job) => (
+                <li key={job.id}>
+                  <Link href={`${router.pathname}/${job.slug}`} passHref>
+                    <a className="block hover:bg-pink-dark transition-colors">
+                      <div className="px-4 py-4 sm:px-6">
+                        <div className="flex items-center justify-between">
+                          <p className="text-sm font-medium text-pink truncate capitalize">
+                            {job.title.rendered.toLowerCase()}
                           </p>
                         </div>
-                        <div className="mt-2 flex items-center text-sm text-white opacity-90">
-                          <CurrencyEuroIcon className="flex-shrink-0 mr-1.5 h-5 w-5 text-gray-400" />
-                          <p>From {job.acf.monthly_salary} Eur</p>
+                        <div className="mt-2 flex justify-between">
+                          <div className="flex">
+                            <p className="flex items-center text-sm text-white opacity-90">
+                              <LocationMarkerIcon className="flex-shrink-0 mr-1.5 h-5 w-5 text-gray-400" />
+                              {job.acf.location}
+                            </p>
+                          </div>
+                          <div className="mt-2 flex items-center text-sm text-white opacity-90">
+                            <CurrencyEuroIcon className="flex-shrink-0 mr-1.5 h-5 w-5 text-gray-400" />
+                            <p>From {job.acf.monthly_salary} Eur</p>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                  </a>
-                </Link>
-              </li>
-            ))}
-          </ul>
+                    </a>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          ) : (
+            <div className="px-4 py-4 sm:px-6 text-pink">
+              Šiuo metu darbo pasiūlymų neturime
+            </div>
+          )}
         </div>
       </div>
     </div>
@@ -65,12 +71,6 @@ export const getStaticProps: GetStaticProps = async () => {
     await axios.get(
       `${process.env.NEXT_PUBLIC_WP_API_URL}/wp/v2/darbo-pasiulymai?per_page=100&page=1`
     );
-
-  if (!data) {
-    return {
-      notFound: true,
-    };
-  }
 
   let notLastPage = headers.link.includes('rel="next');
   let allData = data;

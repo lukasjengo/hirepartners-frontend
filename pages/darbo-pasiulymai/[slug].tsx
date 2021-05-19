@@ -1,6 +1,7 @@
 import { GetStaticPaths, GetStaticProps } from 'next';
 import axios from 'axios';
 
+import { JobSkeleton } from 'components/JobSkeleton';
 import { LocationMarkerIcon } from '@heroicons/react/outline';
 
 import {
@@ -15,7 +16,10 @@ interface Props {
   data: JobResponse;
 }
 
-export default function Dev({ data }: Props) {
+export default function DarboPasiulymas({ data }: Props) {
+  if (!data) {
+    return <JobSkeleton />;
+  }
   return (
     <div className="py-12 px-4 sm:px-6 lg:px-8">
       <div className="text-lg max-w-prose mx-auto">
@@ -115,7 +119,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
   return {
     paths,
-    fallback: 'blocking',
+    fallback: true,
   };
 };
 
@@ -124,14 +128,17 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     `${process.env.NEXT_PUBLIC_WP_API_URL}/wp/v2/darbo-pasiulymai?slug=${params?.slug}`
   );
 
-  if (!data) {
+  if (!data.length) {
     return {
-      notFound: true,
+      redirect: {
+        destination: '/darbo-pasiulymai',
+        permanent: false,
+      },
     };
   }
 
   return {
     props: { data: data[0] },
-    revalidate: 10,
+    revalidate: 1,
   };
 };
