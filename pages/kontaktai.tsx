@@ -21,6 +21,7 @@ export default function Kontaktai() {
     company: '',
     telephone: '',
     message: '',
+    agreeSend: '',
   };
 
   const router = useRouter();
@@ -38,9 +39,16 @@ export default function Kontaktai() {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    if (formData.agreeSend.length > 1) {
+      setFormError('Forma užpildyta neteisingai');
+      return;
+    }
 
     const form = new FormData();
     for (const field in formData) {
+      if (field === 'agreeSend') {
+        continue;
+      }
       form.append(field, formData[field as keyof typeof formData]);
     }
 
@@ -241,6 +249,15 @@ export default function Kontaktai() {
               ></textarea>
             </div>
           </div>
+          <input
+            type="text"
+            name="agreeSend"
+            className="hidden"
+            tabIndex={-1}
+            autoComplete="nope"
+            onChange={handleChange}
+            value={formData.agreeSend}
+          />
           <div className="text-right sm:col-span-2">
             <button
               type="submit"
