@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 
 export const Footer = () => {
   return (
@@ -21,7 +22,12 @@ export const Footer = () => {
             </svg>
           </a>
         </div>
-        <p className="mt-8 text-center text-base text-gray-400">
+        <div className="mt-4 flex justify-center">
+          <Link href="/privatumo-politika" passHref>
+            <a className="text-gray-400 hover:text-pink">Privatumo politika</a>
+          </Link>
+        </div>
+        <p className="mt-4 text-center text-base text-gray-400">
           © {new Date().getFullYear()} Hirepartners. Visos teisės saugomos.
         </p>
       </div>
