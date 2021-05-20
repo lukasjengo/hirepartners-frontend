@@ -1,6 +1,22 @@
+import { NextSeo } from 'next-seo';
+
+const Seo = () => (
+  <NextSeo
+    title="Privatumo politika"
+    description="Hire partners kontaktai."
+    openGraph={{
+      type: 'website',
+      url: 'https://www.hirepartners.lt/privatumo-politika',
+      title: 'Privatumo politika | HirePartners.lt',
+      description: 'Hire partners privatumo politika.',
+    }}
+  />
+);
+
 export default function PrivatumoPolitika() {
   return (
-    <div className="py-10 px-4 sm:px-6 lg:px-8">
+    <main className="py-10 px-4 sm:px-6 lg:px-8">
+      <Seo />
       <div className="text-lg max-w-prose mx-auto">
         <h1 className="text-3xl text-center leading-8 font-extrabold tracking-tight text-pink-darkest sm:text-4xl">
           Privatumo politika
@@ -745,6 +761,6 @@ export default function PrivatumoPolitika() {
         </p>
         <p>Privatumo politikos paskelbimo data 2021 m. balandžio 07 d.</p>
       </div>
-    </div>
+    </main>
   );
 }

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
+import { NextSeo } from 'next-seo';
 import axios from 'axios';
 
 import { Notification } from 'components/Notification';
@@ -12,6 +13,19 @@ import {
 
 import { CF7Response } from 'types/ContactForm7';
 import { RefreshIcon } from '@heroicons/react/solid';
+
+const Seo = () => (
+  <NextSeo
+    title="Susisiekite su mumis"
+    description="Hire partners kontaktai."
+    openGraph={{
+      type: 'website',
+      url: 'https://www.hirepartners.lt/kontaktai',
+      title: 'Susisiekite su mumis | HirePartners.lt',
+      description: 'Hire partners kontaktai.',
+    }}
+  />
+);
 
 export default function Kontaktai() {
   const initialFormData = {
@@ -81,7 +95,8 @@ export default function Kontaktai() {
   }, [formError]);
 
   return (
-    <div className="flex flex-col lg:flex-row max-w-7xl mx-auto mb-12 xl:mb-24">
+    <main className="flex flex-col lg:flex-row max-w-7xl mx-auto mb-12 xl:mb-24">
+      <Seo />
       {formError && (
         <Notification
           icon={<ExclamationCircleIcon className="h-6 w-6 text-red-400" />}
@@ -280,6 +295,6 @@ export default function Kontaktai() {
           </div>
         </form>
       </div>
-    </div>
+    </main>
   );
 }

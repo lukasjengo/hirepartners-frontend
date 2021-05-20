@@ -1,4 +1,5 @@
 import { GetStaticPaths, GetStaticProps } from 'next';
+import { NextSeo } from 'next-seo';
 import axios from 'axios';
 
 import { JobSkeleton } from 'components/JobSkeleton';
@@ -8,6 +9,7 @@ import {
   getTextBetweenSymbols,
   removeAllWhiteSpace,
   splitAtLinebreaks,
+  trimText,
 } from 'utils/stringUtils';
 
 import { JobResponse } from 'types/Job';
@@ -21,7 +23,17 @@ export default function DarboPasiulymas({ data }: Props) {
     return <JobSkeleton />;
   }
   return (
-    <div className="py-12 px-4 sm:px-6 lg:px-8">
+    <main className="py-12 px-4 sm:px-6 lg:px-8">
+      <NextSeo
+        title={`${data.title.rendered}`}
+        description={`${trimText(data.acf.job_description, 160)}.`}
+        openGraph={{
+          type: 'website',
+          url: `https://www.hirepartners.lt/darbo-pasiulymai/${data.slug}`,
+          title: `${data.title.rendered} | HirePartners.lt`,
+          description: `${trimText(data.acf.job_description, 160)}.`,
+        }}
+      />
       <div className="text-lg max-w-prose mx-auto">
         <div className="flex justify-center items-center text-base text-pink font-semibold tracking-wide uppercase">
           <LocationMarkerIcon className="mr-1 h-5 w-5 text-gray-400" />
@@ -83,7 +95,7 @@ export default function DarboPasiulymas({ data }: Props) {
           </strong>
         </p>
       </div>
-    </div>
+    </main>
   );
 }
 

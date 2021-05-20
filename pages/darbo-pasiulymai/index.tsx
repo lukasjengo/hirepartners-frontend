@@ -1,12 +1,28 @@
 import { GetStaticProps } from 'next';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
+import { NextSeo } from 'next-seo';
 import axios from 'axios';
 
 import { CurrencyEuroIcon, LocationMarkerIcon } from '@heroicons/react/outline';
 
 import { getTextBetweenSymbols } from 'utils/stringUtils';
 import { JobResponse } from 'types/Job';
+
+const Seo = () => (
+  <NextSeo
+    title="Darbo pasiūlymai"
+    description="Čia rasite visus aktyvius hire partners komandos kruopščiai atrinktus darbo
+    pasiūlymus."
+    openGraph={{
+      type: 'website',
+      url: 'https://www.hirepartners.lt/darbo-pasiulymai',
+      title: 'Darbo pasiūlymai | HirePartners.lt',
+      description:
+        'Čia rasite visus aktyvius hire partners komandos kruopščiai atrinktus darbo pasiūlymus.',
+    }}
+  />
+);
 
 interface Props {
   data: JobResponse[];
@@ -15,7 +31,8 @@ interface Props {
 export default function DarboPasiulymai({ data }: Props) {
   const router = useRouter();
   return (
-    <div className="pt-10 min-h-screen">
+    <main className="pt-10 min-h-screen">
+      <Seo />
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <h1 className="mt-2 text-3xl font-extrabold text-pink-darkest tracking-tight sm:text-4xl">
           Darbo pasiūlymai
@@ -62,7 +79,7 @@ export default function DarboPasiulymai({ data }: Props) {
           )}
         </div>
       </div>
-    </div>
+    </main>
   );
 }
 
