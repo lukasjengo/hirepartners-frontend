@@ -1,4 +1,5 @@
 import { NextSeo } from 'next-seo';
+
 import { CheckCircleIcon } from '@heroicons/react/solid';
 
 const Seo = () => (

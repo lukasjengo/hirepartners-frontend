@@ -1,18 +1,17 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import { NextSeo } from 'next-seo';
 import axios from 'axios';
-
-import { Notification } from 'components/Notification';
 
 import {
   ExclamationCircleIcon,
   MailIcon,
   PhoneIcon,
 } from '@heroicons/react/outline';
-
-import { CF7Response } from 'types/ContactForm7';
 import { RefreshIcon } from '@heroicons/react/solid';
+
+import { Notification } from 'components';
+import { CF7Response } from 'types/ContactForm7';
 
 const Seo = () => (
   <NextSeo
@@ -99,7 +98,7 @@ export default function Kontaktai() {
       <Seo />
       {formError && (
         <Notification
-          icon={<ExclamationCircleIcon className="h-6 w-6 text-red-400" />}
+          icon={<ExclamationCircleIcon className="h-6 w-6" />}
           title="Nepavyko išsiųsti žinutės"
           description={formError}
           setShow={setFormError}

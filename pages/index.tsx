@@ -1,12 +1,14 @@
 import { NextSeo } from 'next-seo';
 
-import { Features } from 'components/Features';
-import { FeaturesCheckList } from 'components/FeaturesCheckList';
-import { CtaBanner } from 'components/CtaBanner';
-import { AboutSection } from 'components/AboutSection';
-import { Team } from 'components/Team';
-import { CtaCentered } from 'components/CtaCentered';
-import { Hero } from 'components/Hero';
+import {
+  Features,
+  FeaturesCheckList,
+  CtaBanner,
+  AboutSection,
+  Team,
+  CtaCentered,
+  Hero,
+} from 'components';
 
 export default function Home() {
   return (

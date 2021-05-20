@@ -1,17 +1,15 @@
 import { GetStaticPaths, GetStaticProps } from 'next';
 import { NextSeo } from 'next-seo';
 import axios from 'axios';
-
-import { JobSkeleton } from 'components/JobSkeleton';
 import { LocationMarkerIcon } from '@heroicons/react/outline';
 
+import { JobSkeleton } from 'components';
 import {
   getTextBetweenSymbols,
   removeAllWhiteSpace,
   splitAtLinebreaks,
   trimText,
 } from 'utils/stringUtils';
-
 import { JobResponse } from 'types/Job';
 
 interface Props {
