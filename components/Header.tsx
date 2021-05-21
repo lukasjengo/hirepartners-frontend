@@ -95,7 +95,7 @@ export const Header = () => {
                             <span className="sr-only">Hirepartners logo</span>
                             <img
                               className="h-8 w-auto sm:h-10"
-                              src="hirepartners-logo.svg"
+                              src="/hirepartners-logo.svg"
                               alt="Hirepartners logo"
                             />
                           </a>
