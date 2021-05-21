@@ -11,3 +11,11 @@
 .screenheight-nonav--allsizes {
   height: calc(100vh - 74px);
 }
+
+[type='button'],
+[type='submit'],
+button {
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
