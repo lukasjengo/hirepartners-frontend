@@ -1,43 +1,46 @@
 import { GetStaticPaths, GetStaticProps } from 'next';
 import { NextSeo } from 'next-seo';
 import axios from 'axios';
-import { LocationMarkerIcon } from '@heroicons/react/outline';
 
-import { JobSkeleton } from 'components';
-import {
-  getTextBetweenSymbols,
-  removeAllWhiteSpace,
-  splitAtLinebreaks,
-  stripHtml,
-  trimText,
-} from 'utils/stringUtils';
-import { JobResponse } from 'types/Job';
+import { BlogSkeleton } from 'components';
+import { getTextBetweenSymbols, stripHtml, trimText } from 'utils/stringUtils';
+import { BlogResponse } from 'types/Blog';
 
 interface Props {
-  data: JobResponse;
+  data: BlogResponse;
 }
 
-export default function DarboPasiulymas({ data }: Props) {
+export default function BlogArticle({ data }: Props) {
   if (!data) {
-    return <JobSkeleton />;
+    return <BlogSkeleton />;
   }
+
   return (
     <main className="py-12 px-4 sm:px-6 lg:px-8">
       <NextSeo
         title={`${data.title.rendered}`}
-        description={`${stripHtml(trimText(data.content.rendered, 160))}.`}
+        description={`${stripHtml(trimText(data.excerpt.rendered, 160))}.`}
         openGraph={{
           type: 'website',
-          url: `https://www.hirepartners.lt/darbo-pasiulymai/${data.slug}`,
+          url: `https://www.hirepartners.lt/blog/${data.slug}`,
           title: `${data.title.rendered} | HirePartners.lt`,
-          description: `${stripHtml(trimText(data.content.rendered, 160))}.`,
+          description: `${stripHtml(trimText(data.excerpt.rendered, 160))}.`,
+          images: [
+            {
+              url: data._embedded
+                ? data._embedded['wp:featuredmedia'][0].media_details.sizes
+                    .large.source_url
+                : '/default-blog-image-opt.jpg',
+              width: 1200,
+              height: 627,
+              alt: data._embedded
+                ? data._embedded['wp:featuredmedia'][0].alt_text
+                : 'publikacijos pagrindine nuotrauka',
+            },
+          ],
         }}
       />
       <div className="text-lg max-w-prose mx-auto">
-        <div className="flex justify-center items-center text-base text-pink font-semibold tracking-wide uppercase">
-          <LocationMarkerIcon className="mr-1 h-5 w-5 text-gray-400" />
-          {data.acf.location}
-        </div>
         <h1 className="mt-2 text-3xl text-center leading-8 font-extrabold tracking-tight text-pink-darkest sm:text-4xl">
           {data.title.rendered}
         </h1>
@@ -46,21 +49,14 @@ export default function DarboPasiulymas({ data }: Props) {
           dangerouslySetInnerHTML={{ __html: data.content.rendered }}
         />
       </div>
-      <div className="mt-6 prose prose-lg text-gray-500 mx-auto">
-        <p>
-          <strong>
-            Monthly salary from {data.acf.monthly_salary} EUR gross.
-          </strong>
-        </p>
-      </div>
     </main>
   );
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const { data, headers }: { data: JobResponse[]; headers: any } =
+  const { data, headers }: { data: BlogResponse[]; headers: any } =
     await axios.get(
-      `${process.env.NEXT_PUBLIC_WP_API_URL}/wp/v2/darbo-pasiulymai?per_page=100&page=1`
+      `${process.env.NEXT_PUBLIC_WP_API_URL}/wp/v2/posts?per_page=100&page=1`
     );
 
   let notLastPage = headers.link.includes('rel="next');
@@ -68,7 +64,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
   let newHeaders = headers;
 
   while (notLastPage) {
-    const { data, headers }: { data: JobResponse[]; headers: any } =
+    const { data, headers }: { data: BlogResponse[]; headers: any } =
       await axios.get(
         getTextBetweenSymbols(
           newHeaders.link
@@ -83,8 +79,8 @@ export const getStaticPaths: GetStaticPaths = async () => {
     allData = [...allData, ...data];
   }
 
-  const paths = allData.map((job) => ({
-    params: { slug: job.slug },
+  const paths = allData.map((post) => ({
+    params: { slug: post.slug },
   }));
 
   return {
@@ -94,14 +90,14 @@ export const getStaticPaths: GetStaticPaths = async () => {
 };
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
-  const { data }: { data: JobResponse[] } = await axios.get(
-    `${process.env.NEXT_PUBLIC_WP_API_URL}/wp/v2/darbo-pasiulymai?slug=${params?.slug}`
+  const { data }: { data: BlogResponse[] } = await axios.get(
+    `${process.env.NEXT_PUBLIC_WP_API_URL}/wp/v2/posts?slug=${params?.slug}`
   );
 
   if (!data.length) {
     return {
       redirect: {
-        destination: '/darbo-pasiulymai',
+        destination: '/blog',
         permanent: false,
       },
     };

@@ -53,7 +53,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           icon={<CookieIcon className="w-6 h-6" fill="#5b404d" />}
           actionElement={
             <Link href="/privatumo-politika" passHref>
-              <a className="inline-block mt-2 text-sm font-medium text-pink-dark border-b-2 border-pink">
+              <a className="inline-block mt-2 text-sm font-medium text-pink-dark border-b-2 border-pink hover:border-pink-dark transition-colors">
                 Plačiau apie slapukus
               </a>
             </Link>

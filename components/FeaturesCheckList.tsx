@@ -4,7 +4,7 @@ import React from 'react';
 export const FeaturesCheckList = () => {
   return (
     <div
-      className="max-w-7xl mx-auto py-20 px-4 sm:px-6 lg:py-24 lg:px-8 lg:grid lg:grid-cols-3 lg:gap-x-8"
+      className="max-w-7xl mx-auto pt-12 pb-24 lg:py-24 px-4 sm:px-6 lg:px-8 lg:grid lg:grid-cols-3 lg:gap-x-8"
       id="kodel-mes"
     >
       <div>

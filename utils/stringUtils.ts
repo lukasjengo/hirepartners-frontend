@@ -14,3 +14,4 @@ export const trimText = (s: string, maxCharLength: number) => {
     Math.min(trimmedString.length, trimmedString.lastIndexOf(' '))
   );
 };
+export const stripHtml = (s: string) => s.replace(/<[^>]*>?/gm, '');
