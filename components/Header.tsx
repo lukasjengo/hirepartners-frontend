@@ -89,7 +89,7 @@ export const Header = () => {
                 <div className="pt-3 pb-2 px-5">
                   <div className="flex items-center">
                     <div className="flex justify-start flex-1">
-                      <Popover.Button as="div">
+                      <Popover.Button as="div" className="appearance-none">
                         <Link href="/" passHref>
                           <a>
                             <span className="sr-only">Hirepartners logo</span>
@@ -111,42 +111,42 @@ export const Header = () => {
                   </div>
                 </div>
                 <div className="py-6 px-5 flex items-start sm:justify-between flex-col sm:flex-row">
-                  <Popover.Button as="div" className="mb-1">
+                  <Popover.Button as="div" className="mb-1 appearance-none">
                     <Link href="/#paslaugos" passHref>
                       <a className="text-base font-medium text-gray-600 hover:text-pink">
                         Paslaugos
                       </a>
                     </Link>
                   </Popover.Button>
-                  <Popover.Button as="div" className="mb-1">
+                  <Popover.Button as="div" className="mb-1 appearance-none">
                     <Link href="/#kodel-mes" passHref>
                       <a className="text-base font-medium text-gray-600 hover:text-pink">
                         Kodėl mes?
                       </a>
                     </Link>
                   </Popover.Button>
-                  <Popover.Button as="div" className="mb-1">
+                  <Popover.Button as="div" className="mb-1 appearance-none">
                     <Link href="/darbo-pasiulymai" passHref>
                       <a className="text-base font-medium text-gray-600 hover:text-pink">
                         Darbo pasiūlymai
                       </a>
                     </Link>
                   </Popover.Button>
-                  {/* <Popover.Button as="div" className="mb-1">
+                  {/* <Popover.Button as="div" className="mb-1 appearance-none">
                     <Link href="/blogas" passHref>
                       <a className="text-base font-medium text-gray-600 hover:text-pink">
                         Blogas
                       </a>
                     </Link>
                   </Popover.Button> */}
-                  <Popover.Button as="div" className="mb-1">
+                  <Popover.Button as="div" className="mb-1 appearance-none">
                     <Link href="/#apie-mus" passHref>
                       <a className="text-base font-medium text-gray-600 hover:text-pink">
                         Apie mus
                       </a>
                     </Link>
                   </Popover.Button>
-                  <Popover.Button as="div">
+                  <Popover.Button as="div" className="appearance-none">
                     <Link href="/#komanda" passHref>
                       <a className="text-base font-medium text-gray-600 hover:text-pink">
                         Komanda
