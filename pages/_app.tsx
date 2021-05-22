@@ -26,9 +26,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     };
   }, [router.events]);
 
-  const [notification, setNotification] = useState<null | string>(
-    'Mūsų interneto svetainėje yra naudojami slapukai. Naršydami toliau, Jūs sutinkate su slapukų naudojimu.'
-  );
+  const [notification, setNotification] = useState<null | string>(null);
 
   const notificationCloseAction = () => {
     localStorage.setItem('cookieConsentShown', 'true');
@@ -37,6 +35,10 @@ function MyApp({ Component, pageProps }: AppProps) {
   useEffect(() => {
     if (localStorage.getItem('cookieConsentShown')) {
       setNotification(null);
+    } else {
+      setNotification(
+        'Mūsų interneto svetainėje yra naudojami slapukai. Naršydami toliau, Jūs sutinkate su slapukų naudojimu.'
+      );
     }
   }, []);
 

@@ -1,6 +1,8 @@
 import { Fragment } from 'react';
 import Link from 'next/link';
 
+import { NavLink } from 'components';
+
 import { Popover, Transition } from '@headlessui/react';
 import { MenuIcon, XIcon } from '@heroicons/react/outline';
 
@@ -24,36 +26,36 @@ export const Header = () => {
                 </Link>
               </div>
               <nav className="hidden lg:flex space-x-5 xl:space-x-8">
-                <Link href="/#paslaugos" passHref>
+                <NavLink href="/#paslaugos" passHref>
                   <a className="text-base font-medium text-gray-600 hover:text-pink">
                     Paslaugos
                   </a>
-                </Link>
-                <Link href="/#kodel-mes" passHref>
+                </NavLink>
+                <NavLink href="/#kodel-mes" passHref>
                   <a className="text-base font-medium text-gray-600 hover:text-pink">
                     Kodėl mes?
                   </a>
-                </Link>
-                <Link href="/darbo-pasiulymai" passHref>
+                </NavLink>
+                <NavLink href="/darbo-pasiulymai" passHref>
                   <a className="text-base font-medium text-gray-600 hover:text-pink">
                     Darbo pasiūlymai
                   </a>
-                </Link>
-                {/* <Link href="/blogas" passHref>
+                </NavLink>
+                {/* <NavLink href="/blogas" passHref>
                   <a className="text-base font-medium text-gray-600 hover:text-pink">
                     Blogas
                   </a>
-                </Link> */}
-                <Link href="/#apie-mus" passHref>
+                </NavLink> */}
+                <NavLink href="/#apie-mus" passHref>
                   <a className="text-base font-medium text-gray-600 hover:text-pink">
                     Apie mus
                   </a>
-                </Link>
-                <Link href="/#komanda" passHref>
+                </NavLink>
+                <NavLink href="/#komanda" passHref>
                   <a className="text-base font-medium text-gray-600 hover:text-pink">
                     Komanda
                   </a>
-                </Link>
+                </NavLink>
               </nav>
               <div className="flex items-center justify-end md:flex-1 lg:w-0">
                 <Link href="/kontaktai" passHref>
@@ -112,46 +114,46 @@ export const Header = () => {
                 </div>
                 <div className="py-6 px-5 flex items-start sm:justify-between flex-col sm:flex-row">
                   <Popover.Button as="div" className="mb-1">
-                    <Link href="/#paslaugos" passHref>
+                    <NavLink href="/#paslaugos" passHref>
                       <a className="text-base font-medium text-gray-600 hover:text-pink">
                         Paslaugos
                       </a>
-                    </Link>
+                    </NavLink>
                   </Popover.Button>
                   <Popover.Button as="div" className="mb-1">
-                    <Link href="/#kodel-mes" passHref>
+                    <NavLink href="/#kodel-mes" passHref>
                       <a className="text-base font-medium text-gray-600 hover:text-pink">
                         Kodėl mes?
                       </a>
-                    </Link>
+                    </NavLink>
                   </Popover.Button>
                   <Popover.Button as="div" className="mb-1">
-                    <Link href="/darbo-pasiulymai" passHref>
+                    <NavLink href="/darbo-pasiulymai" passHref>
                       <a className="text-base font-medium text-gray-600 hover:text-pink">
                         Darbo pasiūlymai
                       </a>
-                    </Link>
+                    </NavLink>
                   </Popover.Button>
                   {/* <Popover.Button as="div" className="mb-1">
-                    <Link href="/blogas" passHref>
+                    <NavLink href="/blogas" passHref>
                       <a className="text-base font-medium text-gray-600 hover:text-pink">
                         Blogas
                       </a>
-                    </Link>
+                    </NavLink>
                   </Popover.Button> */}
                   <Popover.Button as="div" className="mb-1">
-                    <Link href="/#apie-mus" passHref>
+                    <NavLink href="/#apie-mus" passHref>
                       <a className="text-base font-medium text-gray-600 hover:text-pink">
                         Apie mus
                       </a>
-                    </Link>
+                    </NavLink>
                   </Popover.Button>
                   <Popover.Button as="div">
-                    <Link href="/#komanda" passHref>
+                    <NavLink href="/#komanda" passHref>
                       <a className="text-base font-medium text-gray-600 hover:text-pink">
                         Komanda
                       </a>
-                    </Link>
+                    </NavLink>
                   </Popover.Button>
                 </div>
               </div>

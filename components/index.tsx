@@ -12,3 +12,4 @@ export * from './JobSkeleton';
 export * from './Notification';
 export * from './Team';
 export * from './BlogSkeleton';
+export * from './NavLink';
