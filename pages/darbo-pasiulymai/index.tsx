@@ -51,7 +51,7 @@ export default function DarboPasiulymai({ data }: Props) {
                       <div className="px-4 py-4 sm:px-6">
                         <div className="flex items-center justify-between">
                           <p className="text-sm font-medium text-pink truncate capitalize">
-                            {job.title.rendered.toLowerCase()}
+                            {job.title.rendered}
                           </p>
                         </div>
                         <div className="mt-2 flex justify-between">

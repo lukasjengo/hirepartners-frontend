@@ -11,7 +11,7 @@ export const Footer = () => {
           </Link>
         </div>
         <p className="mt-4 text-center text-base text-gray-400">
-          © {new Date().getFullYear()} Hirepartners. Visos teisės saugomos.
+          © {new Date().getFullYear()} Hire Partners. Visos teisės saugomos.
         </p>
       </div>
     </footer>

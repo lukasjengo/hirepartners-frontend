@@ -46,13 +46,6 @@ export default function DarboPasiulymas({ data }: Props) {
           dangerouslySetInnerHTML={{ __html: data.content.rendered }}
         />
       </div>
-      <div className="mt-6 prose prose-lg text-gray-500 mx-auto">
-        <p>
-          <strong>
-            Monthly salary from {data.acf.monthly_salary} EUR gross.
-          </strong>
-        </p>
-      </div>
     </main>
   );
 }

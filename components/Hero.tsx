@@ -30,30 +30,30 @@ export const Hero = () => {
             </Link>
           </div>
         </div>
-        <p className="mt-12 text-sm text-gray-500 uppercase tracking-wide font-semibold sm:mt-16">
+        <p className="mt-12 text-sm text-gray-400 uppercase tracking-wide font-semibold sm:mt-16">
           Mumis pasitiki:
         </p>
         <div className="mt-5 w-full sm:mx-auto sm:max-w-lg lg:ml-0">
           <div className="flex flex-wrap items-start justify-between">
             <div className="flex justify-center px-1">
               <img
-                className="h-9 sm:h-10"
-                src="https://tailwindui.com/img/logos/statickit-logo-gray-400.svg"
-                alt="StaticKit"
+                className="h-5 sm:h-7"
+                src="/logos/logo-zenitech.svg"
+                alt="Zenitech logo"
               />
             </div>
             <div className="flex justify-center px-1">
               <img
-                className="h-9 sm:h-10"
-                src="https://tailwindui.com/img/logos/statickit-logo-gray-400.svg"
-                alt="StaticKit"
+                className="h-5 sm:h-7"
+                src="/logos/logo-nexchange.svg"
+                alt="Nexchange logo"
               />
             </div>
             <div className="flex justify-center px-1">
               <img
-                className="h-9 sm:h-10"
-                src="https://tailwindui.com/img/logos/statickit-logo-gray-400.svg"
-                alt="StaticKit"
+                className="h-5 sm:h-7"
+                src="/logos/logo-10speed.svg"
+                alt="10speed logo"
               />
             </div>
           </div>
