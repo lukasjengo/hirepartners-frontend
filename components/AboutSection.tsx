@@ -30,7 +30,7 @@ export const AboutSection = () => {
                   </h3>
                   <p className="mt-5 text-base text-gray-500">
                     Efektyviai, greitai ir kokybiškai padėti talentams ir
-                    darbdaviams atrasti vieniems kitus. Mes puikiai žinome kad
+                    darbdaviams atrasti vieniems kitus. Mes puikiai žinome, kad
                     darbuotojai yra didžiausias organizacijos turtas.
                   </p>
                 </div>

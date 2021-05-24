@@ -12,7 +12,7 @@ export const Hero = () => {
         </h1>
         <p className="mt-6 text-lg text-gray-500 sm:text-xl md:mt-8">
           Padedame surasti talentus įmonėms, kurios neturi vidinio HR, laiko, ar
-          ieško specifinių kompetencijų žmogaus.
+          ieško žmogaus su specifinėmis kompetencijomis.
         </p>
         <div className="mt-12 sm:flex sm:justify-center lg:justify-start">
           <div className="rounded-md shadow-md">
