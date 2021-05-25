@@ -54,7 +54,7 @@ export default function DarboPasiulymai({ data }: Props) {
                             {job.title.rendered}
                           </p>
                         </div>
-                        <div className="mt-2 flex justify-between">
+                        <div className="mt-2 flex flex-col justify-between sm:flex-row">
                           <div className="flex">
                             <p className="flex items-center text-sm text-white opacity-90">
                               <LocationMarkerIcon className="flex-shrink-0 mr-1.5 h-5 w-5 text-gray-400" />
@@ -63,7 +63,7 @@ export default function DarboPasiulymai({ data }: Props) {
                           </div>
                           <div className="mt-2 flex items-center text-sm text-white opacity-90">
                             <CurrencyEuroIcon className="flex-shrink-0 mr-1.5 h-5 w-5 text-gray-400" />
-                            <p>From {job.acf.monthly_salary} Eur</p>
+                            <p>From {job.acf.monthly_salary} Eur Gross</p>
                           </div>
                         </div>
                       </div>
