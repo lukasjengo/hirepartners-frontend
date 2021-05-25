@@ -54,7 +54,7 @@ export default function DarboPasiulymai({ data }: Props) {
                             {job.title.rendered}
                           </p>
                         </div>
-                        <div className="mt-2 flex justify-between">
+                        <div className="mt-2 flex flex-col sm:flex-row justify-between">
                           <div className="flex">
                             <p className="flex items-center text-sm text-white opacity-90">
                               <LocationMarkerIcon className="flex-shrink-0 mr-1.5 h-5 w-5 text-gray-400" />
