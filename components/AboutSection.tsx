@@ -9,7 +9,7 @@ export const AboutSection = () => {
           Apie mus
         </h2>
         <p className="mt-2 text-3xl font-extrabold text-pink-darkest tracking-tight sm:text-4xl">
-          Mes esame Hire Partners – “Ledo Mintys” dalis
+          Mes esame Hire Partners – <a className="hover:text-pink" href="https://ledomintys.lt/">„Ledo Mintys”</a> dalis
         </p>
         <p className="mt-5 max-w-prose mx-auto text-xl text-gray-500">
           Orientuojamės į personalo atrankas. Norime ir siekiame būti
