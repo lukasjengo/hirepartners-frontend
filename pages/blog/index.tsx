@@ -1,7 +1,7 @@
 import { GetStaticProps } from 'next';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
-import Image from 'next/image';
+import Image from "next/legacy/image";
 import { NextSeo } from 'next-seo';
 import axios from 'axios';
 
