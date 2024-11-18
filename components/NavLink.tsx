@@ -5,26 +5,21 @@ import Link, { LinkProps } from 'next/link';
 
 interface Props extends React.PropsWithChildren<LinkProps> {
   activeClassName?: string;
+  className?: string;
 }
 
 export const NavLink = ({
   children,
   activeClassName = 'text-pink',
+  className,
   ...props
 }: Props) => {
   const { asPath } = useRouter();
-  const child = Children.only(children) as React.ReactElement;
-  const childClassName = child.props.className || '';
-
   const isActive = asPath === props.href || asPath === props.as;
 
-  const className = cx(childClassName, { [activeClassName]: isActive });
-
   return (
-    <Link {...props}>
-      {React.cloneElement(child, {
-        className: className || null,
-      })}
+    <Link {...props} className={cx(className, { [activeClassName]: isActive })}>
+      {children}
     </Link>
   );
 };

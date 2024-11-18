@@ -16,17 +16,19 @@ export const Hero = () => {
         </p>
         <div className="mt-12 sm:flex sm:justify-center lg:justify-start">
           <div className="rounded-md shadow-md">
-            <Link href="/kontaktai" passHref>
-              <a className="w-full flex items-center justify-center px-8 py-3 border-2 border-transparent text-base font-medium rounded-md text-white bg-pink-dark hover:opacity-95 md:text-lg transition-opacity">
-                Susisiekti
-              </a>
+            <Link
+              href="/kontaktai"
+              className="w-full flex items-center justify-center px-8 py-3 border-2 border-transparent text-base font-medium rounded-md text-white bg-pink-dark hover:opacity-95 md:text-lg transition-opacity"
+            >
+              Susisiekti
             </Link>
           </div>
           <div className="mt-3 rounded-md shadow-md sm:mt-0 sm:ml-3">
-            <Link href="/#paslaugos" passHref>
-              <a className="w-full flex items-center justify-center px-8 py-3 border-2 border-pink-dark text-base font-medium rounded-md text-pink-dark hover:text-pink md:text-lg transition-colors">
-                Paslaugos
-              </a>
+            <Link
+              href="/#paslaugos"
+              className="w-full flex items-center justify-center px-8 py-3 border-2 border-pink-dark text-base font-medium rounded-md text-pink-dark hover:text-pink md:text-lg transition-colors"
+            >
+              Paslaugos
             </Link>
           </div>
         </div>

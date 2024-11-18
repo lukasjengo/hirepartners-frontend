@@ -31,11 +31,12 @@ export const CtaBanner = () => {
           </p>
           <div className="mt-8">
             <div className="inline-flex rounded-md shadow">
-              <Link href="/darbo-pasiulymai" passHref>
-                <a className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-pink-darkest bg-white hover:text-pink transition-colors">
-                  Pasiūlymų sąrašas
-                  <ExternalLinkIcon className="-mr-1 ml-3 h-5 w-5 text-gray-400" />
-                </a>
+              <Link
+                href="/darbo-pasiulymai"
+                className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-pink-darkest bg-white hover:text-pink transition-colors"
+              >
+                Pasiūlymų sąrašas
+                <ExternalLinkIcon className="-mr-1 ml-3 h-5 w-5 text-gray-400" />
               </Link>
             </div>
           </div>

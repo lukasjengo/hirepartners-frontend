@@ -3,7 +3,12 @@ import Link from 'next/link';
 
 import { NavLink } from 'components';
 
-import { Popover, Transition } from '@headlessui/react';
+import {
+  Popover,
+  CloseButton,
+  Transition,
+  PopoverButton,
+} from '@headlessui/react';
 import { MenuIcon, XIcon } from '@heroicons/react/outline';
 
 export const Header = () => {
@@ -14,61 +19,65 @@ export const Header = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6">
             <div className="flex justify-between items-center py-4 space-x-4">
               <div className="flex justify-start flex-1">
-                <Link href="/" passHref>
-                  <a className="text-xl font-black">
-                    <span className="sr-only">Hirepartners logo</span>
-                    <img
-                      className="h-8 w-auto sm:h-10"
-                      src="/hirepartners-logo.svg"
-                      alt="Hirepartners logo"
-                    />
-                  </a>
+                <Link href="/" className="text-xl font-black">
+                  <span className="sr-only">Hirepartners logo</span>
+                  <img
+                    className="h-8 w-auto sm:h-10"
+                    src="/hirepartners-logo.svg"
+                    alt="Hirepartners logo"
+                  />
                 </Link>
               </div>
               <nav className="hidden lg:flex space-x-5 xl:space-x-8">
-                <NavLink href="/#paslaugos" passHref>
-                  <a className="text-base font-medium text-gray-600 hover:text-pink">
-                    Paslaugos
-                  </a>
+                <NavLink
+                  href="/#paslaugos"
+                  className="text-base font-medium text-gray-600 hover:text-pink"
+                >
+                  Paslaugos
                 </NavLink>
-                <NavLink href="/#kodel-mes" passHref>
-                  <a className="text-base font-medium text-gray-600 hover:text-pink">
-                    Kodėl mes?
-                  </a>
+                <NavLink
+                  href="/#kodel-mes"
+                  className="text-base font-medium text-gray-600 hover:text-pink"
+                >
+                  Kodėl mes?
                 </NavLink>
-                <NavLink href="/darbo-pasiulymai" passHref>
-                  <a className="text-base font-medium text-gray-600 hover:text-pink">
-                    Darbo pasiūlymai
-                  </a>
+                <NavLink
+                  href="/darbo-pasiulymai"
+                  className="text-base font-medium text-gray-600 hover:text-pink"
+                >
+                  Darbo pasiūlymai
                 </NavLink>
                 {/* <NavLink href="/blogas" passHref>
                   <a className="text-base font-medium text-gray-600 hover:text-pink">
                     Blogas
                   </a>
                 </NavLink> */}
-                <NavLink href="/#apie-mus" passHref>
-                  <a className="text-base font-medium text-gray-600 hover:text-pink">
-                    Apie mus
-                  </a>
+                <NavLink
+                  href="/#apie-mus"
+                  className="text-base font-medium text-gray-600 hover:text-pink"
+                >
+                  Apie mus
                 </NavLink>
-                <NavLink href="/#komanda" passHref>
-                  <a className="text-base font-medium text-gray-600 hover:text-pink">
-                    Komanda
-                  </a>
+                <NavLink
+                  href="/#komanda"
+                  className="text-base font-medium text-gray-600 hover:text-pink"
+                >
+                  Komanda
                 </NavLink>
               </nav>
               <div className="flex items-center justify-end md:flex-1 lg:w-0">
-                <Link href="/kontaktai" passHref>
-                  <a className="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-md text-base font-medium text-white bg-pink-dark hover:opacity-95 transition-opacity">
-                    Susisiekti
-                  </a>
+                <Link
+                  href="/kontaktai"
+                  className="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-md text-base font-medium text-white bg-pink-dark hover:opacity-95 transition-opacity"
+                >
+                  Susisiekti
                 </Link>
               </div>
               <div className="lg:hidden">
-                <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-pink-dark hover:bg-pink-light focus:outline-none focus:ring-2 focus:ring-inset focus:ring-pink-dark">
+                <PopoverButton className="bg-white rounded-md p-2 inline-flex items-center justify-center text-pink-dark hover:bg-pink-light focus:outline-none focus:ring-2 focus:ring-inset focus:ring-pink-dark">
                   <span className="sr-only">Atidaryti meniu</span>
                   <MenuIcon className="h-6 w-6" aria-hidden="true" />
-                </Popover.Button>
+                </PopoverButton>
               </div>
             </div>
           </div>
@@ -91,70 +100,66 @@ export const Header = () => {
                 <div className="pt-3 pb-2 px-5">
                   <div className="flex items-center">
                     <div className="flex justify-start flex-1">
-                      <Popover.Button as="div">
-                        <Link href="/" passHref>
-                          <a>
-                            <span className="sr-only">Hirepartners logo</span>
-                            <img
-                              className="h-8 w-auto sm:h-10"
-                              src="/hirepartners-logo.svg"
-                              alt="Hirepartners logo"
-                            />
-                          </a>
+                      <CloseButton as="div">
+                        <Link href="/">
+                          <span className="sr-only">Hirepartners logo</span>
+                          <img
+                            className="h-8 w-auto sm:h-10"
+                            src="/hirepartners-logo.svg"
+                            alt="Hirepartners logo"
+                          />
                         </Link>
-                      </Popover.Button>
+                      </CloseButton>
                     </div>
                     <div className="ml-auto">
-                      <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-pink-dark hover:bg-pink-light focus:outline-none focus:ring-2 focus:ring-inset focus:ring-pink-dark">
+                      <CloseButton className="bg-white rounded-md p-2 inline-flex items-center justify-center text-pink-dark hover:bg-pink-light focus:outline-none focus:ring-2 focus:ring-inset focus:ring-pink-dark">
                         <span className="sr-only">Close menu</span>
                         <XIcon className="h-6 w-6" aria-hidden="true" />
-                      </Popover.Button>
+                      </CloseButton>
                     </div>
                   </div>
                 </div>
                 <div className="py-6 px-5 flex items-start sm:justify-between flex-col sm:flex-row">
-                  <Popover.Button as="div" className="mb-1">
-                    <NavLink href="/#paslaugos" passHref>
-                      <a className="text-base font-medium text-gray-600 hover:text-pink">
-                        Paslaugos
-                      </a>
+                  <CloseButton as="div" className="mb-1">
+                    <NavLink
+                      href="/#paslaugos"
+                      className="text-base font-medium text-gray-600 hover:text-pink"
+                    >
+                      Paslaugos
                     </NavLink>
-                  </Popover.Button>
-                  <Popover.Button as="div" className="mb-1">
-                    <NavLink href="/#kodel-mes" passHref>
-                      <a className="text-base font-medium text-gray-600 hover:text-pink">
-                        Kodėl mes?
-                      </a>
+                  </CloseButton>
+                  <CloseButton as="div" className="mb-1">
+                    <NavLink
+                      href="/#kodel-mes"
+                      className="text-base font-medium text-gray-600 hover:text-pink"
+                    >
+                      Kodėl mes?
                     </NavLink>
-                  </Popover.Button>
-                  <Popover.Button as="div" className="mb-1">
-                    <NavLink href="/darbo-pasiulymai" passHref>
-                      <a className="text-base font-medium text-gray-600 hover:text-pink">
-                        Darbo pasiūlymai
-                      </a>
+                  </CloseButton>
+                  <CloseButton as="div" className="mb-1">
+                    <NavLink
+                      href="/darbo-pasiulymai"
+                      className="text-base font-medium text-gray-600 hover:text-pink"
+                    >
+                      Darbo pasiūlymai
                     </NavLink>
-                  </Popover.Button>
-                  {/* <Popover.Button as="div" className="mb-1">
-                    <NavLink href="/blogas" passHref>
-                      <a className="text-base font-medium text-gray-600 hover:text-pink">
-                        Blogas
-                      </a>
+                  </CloseButton>
+                  <CloseButton as="div" className="mb-1">
+                    <NavLink
+                      href="/#apie-mus"
+                      className="text-base font-medium text-gray-600 hover:text-pink"
+                    >
+                      Apie mus
                     </NavLink>
-                  </Popover.Button> */}
-                  <Popover.Button as="div" className="mb-1">
-                    <NavLink href="/#apie-mus" passHref>
-                      <a className="text-base font-medium text-gray-600 hover:text-pink">
-                        Apie mus
-                      </a>
+                  </CloseButton>
+                  <CloseButton as="div">
+                    <NavLink
+                      href="/#komanda"
+                      className="text-base font-medium text-gray-600 hover:text-pink"
+                    >
+                      Komanda
                     </NavLink>
-                  </Popover.Button>
-                  <Popover.Button as="div">
-                    <NavLink href="/#komanda" passHref>
-                      <a className="text-base font-medium text-gray-600 hover:text-pink">
-                        Komanda
-                      </a>
-                    </NavLink>
-                  </Popover.Button>
+                  </CloseButton>
                 </div>
               </div>
             </Popover.Panel>
