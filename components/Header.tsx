@@ -8,6 +8,7 @@ import {
   CloseButton,
   Transition,
   PopoverButton,
+  PopoverPanel,
 } from '@headlessui/react';
 import { MenuIcon, XIcon } from '@heroicons/react/outline';
 
@@ -92,7 +93,7 @@ export const Header = () => {
             leaveFrom="opacity-100 scale-100"
             leaveTo="opacity-0 scale-95"
           >
-            <Popover.Panel
+            <PopoverPanel
               static
               className="absolute top-0 inset-x-0 z-10 p-2 transition transform origin-top-right lg:hidden"
             >
@@ -120,49 +121,44 @@ export const Header = () => {
                   </div>
                 </div>
                 <div className="py-6 px-5 flex items-start sm:justify-between flex-col sm:flex-row">
-                  <CloseButton as="div" className="mb-1">
-                    <NavLink
-                      href="/#paslaugos"
-                      className="text-base font-medium text-gray-600 hover:text-pink"
-                    >
-                      Paslaugos
-                    </NavLink>
+                  <CloseButton
+                    as={NavLink}
+                    href="/#paslaugos"
+                    className="mb-1 text-base font-medium text-gray-600 hover:text-pink"
+                  >
+                    Paslaugos
                   </CloseButton>
-                  <CloseButton as="div" className="mb-1">
-                    <NavLink
-                      href="/#kodel-mes"
-                      className="text-base font-medium text-gray-600 hover:text-pink"
-                    >
-                      Kodėl mes?
-                    </NavLink>
+                  <CloseButton
+                    as={NavLink}
+                    href="/#kodel-mes"
+                    className="mb-1 text-base font-medium text-gray-600 hover:text-pink"
+                  >
+                    Kodėl mes?
                   </CloseButton>
-                  <CloseButton as="div" className="mb-1">
-                    <NavLink
-                      href="/darbo-pasiulymai"
-                      className="text-base font-medium text-gray-600 hover:text-pink"
-                    >
-                      Darbo pasiūlymai
-                    </NavLink>
+                  <CloseButton
+                    as={NavLink}
+                    href="/darbo-pasiulymai"
+                    className="mb-1 text-base font-medium text-gray-600 hover:text-pink"
+                  >
+                    Darbo pasiūlymai
                   </CloseButton>
-                  <CloseButton as="div" className="mb-1">
-                    <NavLink
-                      href="/#apie-mus"
-                      className="text-base font-medium text-gray-600 hover:text-pink"
-                    >
-                      Apie mus
-                    </NavLink>
+                  <CloseButton
+                    as={NavLink}
+                    href="/#apie-mus"
+                    className="mb-1 text-base font-medium text-gray-600 hover:text-pink"
+                  >
+                    Apie mus
                   </CloseButton>
-                  <CloseButton as="div">
-                    <NavLink
-                      href="/#komanda"
-                      className="text-base font-medium text-gray-600 hover:text-pink"
-                    >
-                      Komanda
-                    </NavLink>
+                  <CloseButton
+                    as={NavLink}
+                    href="/#komanda"
+                    className="text-base font-medium text-gray-600 hover:text-pink"
+                  >
+                    Komanda
                   </CloseButton>
                 </div>
               </div>
-            </Popover.Panel>
+            </PopoverPanel>
           </Transition>
         </>
       )}
