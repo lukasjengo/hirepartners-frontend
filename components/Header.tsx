@@ -172,14 +172,14 @@ export const Header = ({ lang = 'lt' }) => {
                   </CloseButton>
                   <CloseButton
                     as={NavLink}
-                    href="/#komanda"
+                    href={lang === 'lt' ? '/#komanda' : '/en#team'}
                     className="text-base font-medium text-gray-600 hover:text-pink"
                   >
                     {lang === 'lt' ? 'Komanda' : 'Team'}
                   </CloseButton>
                   <CloseButton
                     as={NavLink}
-                    href={lang === 'lt' ? '/#komanda' : '/en#team'}
+                    href={lang === 'lt' ? '/en' : '/'}
                     className="text-base font-medium text-gray-600 hover:text-pink mt-2 sm:mt-0"
                   >
                     <div className="relative rounded overflow-hidden h-6 w-8 hover:opacity-80 transition-opacity">
