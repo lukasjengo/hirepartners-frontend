@@ -2,12 +2,14 @@ import { useEffect, useState } from 'react';
 import { AppProps } from 'next/app';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+import { usePathname } from 'next/navigation';
 import Head from 'next/head';
 import { DefaultSeo } from 'next-seo';
 
 import { Header, Footer, Notification, CookieIcon } from 'components';
 import { SEO } from 'next-seo.config';
 import * as gtag from 'lib/gtag';
+import { getIsEnglishPath } from 'utils/urlUtils';
 
 import '../styles/globals.css';
 
@@ -15,6 +17,8 @@ const isProd = process.env.NODE_ENV === 'production';
 
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
+  const pathName = usePathname();
+  const isEnglishPath = getIsEnglishPath(pathName);
 
   useEffect(() => {
     const handleRouteChange = (url: URL) => {
@@ -26,7 +30,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     };
   }, [router.events]);
 
-  const [notification, setNotification] = useState<null | string>(null);
+  const [showNotification, setShowNotification] = useState<boolean>(false);
 
   const notificationCloseAction = () => {
     localStorage.setItem('cookieConsentShown', 'true');
@@ -34,11 +38,9 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   useEffect(() => {
     if (localStorage.getItem('cookieConsentShown')) {
-      setNotification(null);
+      setShowNotification(false);
     } else {
-      setNotification(
-        'Mūsų interneto svetainėje yra naudojami slapukai. Naršydami toliau, Jūs sutinkate su slapukų naudojimu.'
-      );
+      setShowNotification(true);
     }
   }, []);
 
@@ -48,9 +50,9 @@ function MyApp({ Component, pageProps }: AppProps) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <DefaultSeo {...SEO} />
-      <Header />
+      <Header lang={isEnglishPath ? 'en' : 'lt'} />
       <Component {...pageProps} />
-      {notification && (
+      {showNotification && (
         <Notification
           icon={<CookieIcon className="w-6 h-6" fill="#5b404d" />}
           actionElement={
@@ -58,16 +60,20 @@ function MyApp({ Component, pageProps }: AppProps) {
               href="/privatumo-politika"
               className="inline-block mt-2 text-sm font-medium text-pink-dark border-b-2 border-pink hover:border-pink-dark transition-colors"
             >
-              Plačiau apie slapukus
+              {isEnglishPath ? 'More about cookies' : 'Plačiau apie slapukus'}
             </Link>
           }
-          title="Mes naudojame slapukus"
-          description={notification}
-          setShow={setNotification}
+          title={isEnglishPath ? 'We use cookies' : 'Mes naudojame slapukus'}
+          description={
+            isEnglishPath
+              ? 'Our website uses cookies. By browsing this website, you agree with our use of cookies.'
+              : 'Mūsų interneto svetainėje yra naudojami slapukai. Naršydami toliau, Jūs sutinkate su slapukų naudojimu.'
+          }
+          setShow={setShowNotification}
           closeAction={notificationCloseAction}
         />
       )}
-      <Footer />
+      <Footer lang={getIsEnglishPath(pathName) ? 'en' : 'lt'} />
     </>
   );
 }

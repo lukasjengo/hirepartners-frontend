@@ -11,15 +11,14 @@ import { JobResponse } from 'types/Job';
 
 const Seo = () => (
   <NextSeo
-    title="Darbo pasiūlymai"
-    description="Čia rasite visus aktyvius Hire Partners komandos kruopščiai atrinktus darbo
-    pasiūlymus."
+    title="Jobs"
+    description="Browse all job listings that are carefully selected by the Hire Partners team."
     openGraph={{
       type: 'website',
-      url: 'https://www.hirepartners.lt/darbo-pasiulymai',
-      title: 'Darbo pasiūlymai | HirePartners.lt',
+      url: 'https://www.hirepartners.lt/en/jobs',
+      title: 'Jobs | HirePartners.lt',
       description:
-        'Čia rasite visus aktyvius Hire Partners komandos kruopščiai atrinktus darbo pasiūlymus.',
+        'Browse all job listings that are carefully selected by the Hire Partners team.',
     }}
   />
 );
@@ -35,11 +34,10 @@ export default function DarboPasiulymai({ data }: Props) {
       <Seo />
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <h1 className="mt-2 text-3xl font-extrabold text-pink-darkest tracking-tight sm:text-4xl">
-          Darbo pasiūlymai
+          Jobs
         </h1>
         <p className="mt-5 max-w-prose text-xl text-gray-500">
-          Čia rasite visus aktyvius mūsų komandos kruopščiai atrinktus darbo
-          pasiūlymus.
+          Browse all job listings that are carefully selected by our team.
         </p>
         <div className="mt-12 bg-pink-darkest shadow overflow-hidden rounded-md">
           {data.length ? (
@@ -75,7 +73,7 @@ export default function DarboPasiulymai({ data }: Props) {
             </ul>
           ) : (
             <div className="px-4 py-4 sm:px-6 text-pink">
-              Šiuo metu darbo pasiūlymų neturime
+              No active job offers are available at the moment
             </div>
           )}
         </div>
@@ -87,7 +85,7 @@ export default function DarboPasiulymai({ data }: Props) {
 export const getStaticProps: GetStaticProps = async () => {
   const { data, headers }: { data: JobResponse[]; headers: any } =
     await axios.get(
-      `${process.env.NEXT_PUBLIC_WP_API_URL}/wp/v2/darbo-pasiulymai?per_page=100&page=1`
+      `${process.env.NEXT_PUBLIC_WP_API_URL}/wp/v2/jobs?per_page=100&page=1`
     );
 
   let notLastPage = headers.link.includes('rel="next');

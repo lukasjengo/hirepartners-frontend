@@ -15,18 +15,18 @@ import { CF7Response } from 'types/ContactForm7';
 
 const Seo = () => (
   <NextSeo
-    title="Susisiekite su mumis"
-    description="Hire partners kontaktai."
+    title="Contact us"
+    description="Hire partners contacts."
     openGraph={{
       type: 'website',
-      url: 'https://www.hirepartners.lt/kontaktai',
-      title: 'Susisiekite su mumis | HirePartners.lt',
-      description: 'Hire partners kontaktai.',
+      url: 'https://www.hirepartners.lt/en/contacts',
+      title: 'Contact us | HirePartners.lt',
+      description: 'Hire partners contacts.',
     }}
   />
 );
 
-export default function Kontaktai() {
+export default function Contact() {
   const initialFormData = {
     firstName: '',
     lastName: '',
@@ -54,7 +54,7 @@ export default function Kontaktai() {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (formData.agreeSend.length > 1) {
-      setFormError('Forma užpildyta neteisingai');
+      setFormError('Form is not filled out correctly');
       setShowNotification(true);
       return;
     }
@@ -70,13 +70,13 @@ export default function Kontaktai() {
     try {
       setLoading(true);
       const { data }: { data: CF7Response } = await axios.post(
-        `${process.env.NEXT_PUBLIC_WP_API_URL}/contact-form-7/v1/contact-forms/27/feedback`,
+        `${process.env.NEXT_PUBLIC_WP_API_URL}/contact-form-7/v1/contact-forms/593/feedback`,
         form
       );
 
       if (data.status === 'mail_sent') {
         setLoading(false);
-        router.push('/zinute-issiusta');
+        router.push('/en/message-sent');
       } else {
         throw new Error(data.message);
       }
@@ -103,18 +103,18 @@ export default function Kontaktai() {
       {showNotification && formError && (
         <Notification
           icon={<ExclamationCircleIcon className="h-6 w-6" />}
-          title="Nepavyko išsiųsti žinutės"
+          title="Something went wrong"
           description={formError}
           setShow={setShowNotification}
         />
       )}
       <div className="w-full px-4 sm:px-6 mt-10 mx-auto lg:mx-0">
         <h2 className="text-2xl font-extrabold tracking-tight text-pink-darkest sm:text-3xl">
-          Susisiekite su mumis
+          Contact us
         </h2>
         <dl className="mt-8 text-base text-gray-500">
           <div className="mt-6">
-            <dt className="sr-only">Telefono numeris</dt>
+            <dt className="sr-only">Phone</dt>
             <dd className="flex">
               <PhoneIcon className="flex-shrink-0 h-6 w-6 text-gray-400" />
               <a href="tel:+37062696616" className="ml-3">
@@ -123,7 +123,7 @@ export default function Kontaktai() {
             </dd>
           </div>
           <div className="mt-3">
-            <dt className="sr-only">Elektroninis paštas</dt>
+            <dt className="sr-only">Email</dt>
             <dd className="flex">
               <MailIcon className="flex-shrink-0 h-6 w-6 text-gray-400" />
               <a href="mailto:info@hirepartners.lt" className="ml-3">
@@ -143,7 +143,7 @@ export default function Kontaktai() {
               htmlFor="firstName"
               className="block text-sm font-medium text-gray-700"
             >
-              Vardas
+              First name
             </label>
             <div className="mt-1">
               <input
@@ -163,7 +163,7 @@ export default function Kontaktai() {
               htmlFor="lastName"
               className="block text-sm font-medium text-gray-700"
             >
-              Pavardė
+              Last name
             </label>
             <div className="mt-1">
               <input
@@ -183,7 +183,7 @@ export default function Kontaktai() {
               htmlFor="email"
               className="block text-sm font-medium text-gray-700"
             >
-              El. paštas
+              Email
             </label>
             <div className="mt-1">
               <input
@@ -203,7 +203,7 @@ export default function Kontaktai() {
               htmlFor="company"
               className="block text-sm font-medium text-gray-700"
             >
-              Įmonės pavadinimas
+              Company name
             </label>
             <div className="mt-1">
               <input
@@ -224,13 +224,13 @@ export default function Kontaktai() {
                 htmlFor="telephone"
                 className="block text-sm font-medium text-gray-700"
               >
-                Telefono numeris
+                Phone
               </label>
               <span
                 id="telephone_description"
                 className="text-sm text-gray-500"
               >
-                Nebūtinas
+                Not required
               </span>
             </div>
             <div className="mt-1">
@@ -252,7 +252,7 @@ export default function Kontaktai() {
                 htmlFor="message"
                 className="block text-sm font-medium text-gray-700"
               >
-                Jūsų žinutė
+                Your message
               </label>
             </div>
             <div className="mt-1">
@@ -287,10 +287,10 @@ export default function Kontaktai() {
               disabled={loading}
             >
               {!loading ? (
-                <span>Siųsti</span>
+                <span>Send</span>
               ) : (
                 <span>
-                  Siunčiama
+                  Sending
                   <RefreshIcon className="inline-block animate-spin h-4 w-4 ml-2" />
                 </span>
               )}

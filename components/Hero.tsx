@@ -1,8 +1,8 @@
 import React from 'react';
 import Link from 'next/link';
-import Image from "next/legacy/image";
+import Image from 'next/legacy/image';
 
-export const Hero = () => {
+export const Hero = ({ lang = 'lt' }) => {
   return (
     <div className="flex flex-col lg:flex-row text-center lg:text-left screenheight-nonav">
       <div className="flex flex-col w-full lg:w-1/2 mx-auto my-10 sm:max-w-xl justify-center px-4">
@@ -17,7 +17,7 @@ export const Hero = () => {
         <div className="mt-12 sm:flex sm:justify-center lg:justify-start">
           <div className="rounded-md shadow-md">
             <Link
-              href="/kontaktai"
+              href={lang === 'en' ? '/en/contact' : '/kontaktai'}
               className="w-full flex items-center justify-center px-8 py-3 border-2 border-transparent text-base font-medium rounded-md text-white bg-pink-dark hover:opacity-95 md:text-lg transition-opacity"
             >
               Susisiekti
@@ -25,7 +25,7 @@ export const Hero = () => {
           </div>
           <div className="mt-3 rounded-md shadow-md sm:mt-0 sm:ml-3">
             <Link
-              href="/#paslaugos"
+              href={lang === 'en' ? '/en#services' : '#paslaugos'}
               className="w-full flex items-center justify-center px-8 py-3 border-2 border-pink-dark text-base font-medium rounded-md text-pink-dark hover:text-pink md:text-lg transition-colors"
             >
               Paslaugos
@@ -68,6 +68,7 @@ export const Hero = () => {
           objectFit="cover"
           objectPosition="center"
           alt="Hirepartners dovile ir inga"
+          priority
         />
       </div>
     </div>

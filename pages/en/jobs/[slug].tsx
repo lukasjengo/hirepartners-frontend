@@ -11,7 +11,7 @@ interface Props {
   data: JobResponse;
 }
 
-export default function DarboPasiulymas({ data }: Props) {
+export default function Jobs({ data }: Props) {
   if (!data) {
     return <JobSkeleton />;
   }
@@ -22,7 +22,7 @@ export default function DarboPasiulymas({ data }: Props) {
         description={`${stripHtml(trimText(data.content.rendered, 160))}.`}
         openGraph={{
           type: 'website',
-          url: `https://www.hirepartners.lt/darbo-pasiulymai/${data.slug}`,
+          url: `https://www.hirepartners.lt/en/jobs/${data.slug}`,
           title: `${data.title.rendered} | HirePartners.lt`,
           description: `${stripHtml(trimText(data.content.rendered, 160))}.`,
         }}
@@ -47,7 +47,7 @@ export default function DarboPasiulymas({ data }: Props) {
 export const getStaticPaths: GetStaticPaths = async () => {
   const { data, headers }: { data: JobResponse[]; headers: any } =
     await axios.get(
-      `${process.env.NEXT_PUBLIC_WP_API_URL}/wp/v2/darbo-pasiulymai?per_page=100&page=1`
+      `${process.env.NEXT_PUBLIC_WP_API_URL}/wp/v2/jobs?per_page=100&page=1`
     );
 
   let notLastPage = headers.link.includes('rel="next');
@@ -82,13 +82,13 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   const { data }: { data: JobResponse[] } = await axios.get(
-    `${process.env.NEXT_PUBLIC_WP_API_URL}/wp/v2/darbo-pasiulymai?slug=${params?.slug}`
+    `${process.env.NEXT_PUBLIC_WP_API_URL}/wp/v2/jobs?slug=${params?.slug}`
   );
 
   if (!data.length) {
     return {
       redirect: {
-        destination: '/darbo-pasiulymai',
+        destination: '/jobs',
         permanent: false,
       },
     };

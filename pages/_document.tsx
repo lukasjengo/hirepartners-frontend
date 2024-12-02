@@ -7,19 +7,21 @@ import Document, {
 } from 'next/document';
 
 import { GA_TRACKING_ID } from 'lib/gtag';
+import { getIsEnglishPath } from 'utils/urlUtils';
 
 const isProd = process.env.NODE_ENV === 'production';
 
-class MyDocument extends Document {
+class MyDocument extends Document<{ lang: string }> {
   static async getInitialProps(ctx: DocumentContext) {
     const initialProps = await Document.getInitialProps(ctx);
-    return { ...initialProps };
+    const lang = getIsEnglishPath(ctx.pathname) ? 'en' : 'lt';
+    return { ...initialProps, lang };
   }
 
   render() {
     return (
       <Html>
-        <Head lang="lt">
+        <Head lang={this.props.lang}>
           {isProd && (
             <>
               <script

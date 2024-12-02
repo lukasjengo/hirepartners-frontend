@@ -1,4 +1,7 @@
+'use client';
+
 import { Fragment } from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
 
 import { NavLink } from 'components';
@@ -12,7 +15,7 @@ import {
 } from '@headlessui/react';
 import { MenuIcon, XIcon } from '@heroicons/react/outline';
 
-export const Header = () => {
+export const Header = ({ lang = 'lt' }) => {
   return (
     <Popover className="sticky top-0 left-0 bg-white shadow-sm z-50">
       {({ open }) => (
@@ -20,7 +23,10 @@ export const Header = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6">
             <div className="flex justify-between items-center py-4 space-x-4">
               <div className="flex justify-start flex-1">
-                <Link href="/" className="text-xl font-black">
+                <Link
+                  href={lang === 'lt' ? '/' : '/en'}
+                  className="text-xl font-black"
+                >
                   <span className="sr-only">Hirepartners logo</span>
                   <img
                     className="h-8 w-auto sm:h-10"
@@ -31,22 +37,22 @@ export const Header = () => {
               </div>
               <nav className="hidden lg:flex space-x-5 xl:space-x-8">
                 <NavLink
-                  href="/#paslaugos"
+                  href={lang === 'lt' ? '/#paslaugos' : '/en#services'}
                   className="text-base font-medium text-gray-600 hover:text-pink"
                 >
-                  Paslaugos
+                  {lang === 'lt' ? 'Paslaugos' : 'Services'}
                 </NavLink>
                 <NavLink
-                  href="/#kodel-mes"
+                  href={lang === 'lt' ? '/#kodel-mes' : '/en#why-us'}
                   className="text-base font-medium text-gray-600 hover:text-pink"
                 >
-                  Kodėl mes?
+                  {lang === 'lt' ? 'Kodėl mes?' : 'Why us?'}
                 </NavLink>
                 <NavLink
-                  href="/darbo-pasiulymai"
+                  href={lang === 'lt' ? '/darbo-pasiulymai' : '/en/jobs'}
                   className="text-base font-medium text-gray-600 hover:text-pink"
                 >
-                  Darbo pasiūlymai
+                  {lang === 'lt' ? 'Darbo pasiūlymai' : 'Jobs'}
                 </NavLink>
                 {/* <NavLink href="/blogas" passHref>
                   <a className="text-base font-medium text-gray-600 hover:text-pink">
@@ -54,29 +60,44 @@ export const Header = () => {
                   </a>
                 </NavLink> */}
                 <NavLink
-                  href="/#apie-mus"
+                  href={lang === 'lt' ? '/#apie-mus' : '/en#about-us'}
                   className="text-base font-medium text-gray-600 hover:text-pink"
                 >
-                  Apie mus
+                  {lang === 'lt' ? 'Apie mus' : 'About us'}
                 </NavLink>
                 <NavLink
-                  href="/#komanda"
+                  href={lang === 'lt' ? '/#komanda' : '/en#team'}
                   className="text-base font-medium text-gray-600 hover:text-pink"
                 >
-                  Komanda
+                  {lang === 'lt' ? 'Komanda' : 'Team'}
+                </NavLink>
+                <NavLink
+                  href={lang === 'lt' ? '/en' : '/'}
+                  className="text-base font-medium text-gray-600 hover:text-pink"
+                >
+                  <div className="relative rounded overflow-hidden h-6 w-8 hover:opacity-80 transition-opacity">
+                    <Image
+                      src={lang === 'lt' ? '/us.svg' : '/lt.svg'}
+                      alt="Language select flag"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
                 </NavLink>
               </nav>
               <div className="flex items-center justify-end md:flex-1 lg:w-0">
                 <Link
-                  href="/kontaktai"
+                  href={lang === 'lt' ? '/kontaktai' : '/en/contact'}
                   className="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-md text-base font-medium text-white bg-pink-dark hover:opacity-95 transition-opacity"
                 >
-                  Susisiekti
+                  {lang === 'lt' ? 'Susisiekti' : 'Contact'}
                 </Link>
               </div>
               <div className="lg:hidden">
                 <PopoverButton className="bg-white rounded-md p-2 inline-flex items-center justify-center text-pink-dark hover:bg-pink-light focus:outline-none focus:ring-2 focus:ring-inset focus:ring-pink-dark">
-                  <span className="sr-only">Atidaryti meniu</span>
+                  <span className="sr-only">
+                    {lang === 'lt' ? 'Atidaryti meniu' : 'Open menu'}
+                  </span>
                   <MenuIcon className="h-6 w-6" aria-hidden="true" />
                 </PopoverButton>
               </div>
@@ -102,7 +123,7 @@ export const Header = () => {
                   <div className="flex items-center">
                     <div className="flex justify-start flex-1">
                       <CloseButton as="div">
-                        <Link href="/">
+                        <Link href={lang === 'lt' ? '/' : '/en'}>
                           <span className="sr-only">Hirepartners logo</span>
                           <img
                             className="h-8 w-auto sm:h-10"
@@ -123,38 +144,52 @@ export const Header = () => {
                 <div className="py-6 px-5 flex items-start sm:justify-between flex-col sm:flex-row">
                   <CloseButton
                     as={NavLink}
-                    href="/#paslaugos"
+                    href={lang === 'lt' ? '/#paslaugos' : '/en#services'}
                     className="mb-1 text-base font-medium text-gray-600 hover:text-pink"
                   >
-                    Paslaugos
+                    {lang === 'lt' ? 'Paslaugos' : 'Services'}
                   </CloseButton>
                   <CloseButton
                     as={NavLink}
-                    href="/#kodel-mes"
+                    href={lang === 'lt' ? '/#kodel-mes' : '/en#why-us'}
                     className="mb-1 text-base font-medium text-gray-600 hover:text-pink"
                   >
-                    Kodėl mes?
+                    {lang === 'lt' ? 'Kodėl mes?' : 'Why us?'}
                   </CloseButton>
                   <CloseButton
                     as={NavLink}
-                    href="/darbo-pasiulymai"
+                    href={lang === 'lt' ? '/darbo-pasiulymai' : '/en/jobs'}
                     className="mb-1 text-base font-medium text-gray-600 hover:text-pink"
                   >
-                    Darbo pasiūlymai
+                    {lang === 'lt' ? 'Darbo pasiūlymai' : 'Jobs'}
                   </CloseButton>
                   <CloseButton
                     as={NavLink}
-                    href="/#apie-mus"
+                    href={lang === 'lt' ? '/#apie-mus' : '/en#about-us'}
                     className="mb-1 text-base font-medium text-gray-600 hover:text-pink"
                   >
-                    Apie mus
+                    {lang === 'lt' ? 'Apie mus' : 'About us'}
                   </CloseButton>
                   <CloseButton
                     as={NavLink}
                     href="/#komanda"
                     className="text-base font-medium text-gray-600 hover:text-pink"
                   >
-                    Komanda
+                    {lang === 'lt' ? 'Komanda' : 'Team'}
+                  </CloseButton>
+                  <CloseButton
+                    as={NavLink}
+                    href={lang === 'lt' ? '/#komanda' : '/en#team'}
+                    className="text-base font-medium text-gray-600 hover:text-pink mt-2 sm:mt-0"
+                  >
+                    <div className="relative rounded overflow-hidden h-6 w-8 hover:opacity-80 transition-opacity">
+                      <Image
+                        src={lang === 'lt' ? '/us.svg' : '/lt.svg'}
+                        alt="Language select flag"
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
                   </CloseButton>
                 </div>
               </div>
