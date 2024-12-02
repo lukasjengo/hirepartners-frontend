@@ -24,10 +24,10 @@ export default function Home() {
       />
       <Hero lang={isEnglishPath ? 'en' : 'lt'} />
       <Features lang={isEnglishPath ? 'en' : 'lt'} />
-      <FeaturesCheckList />
+      <FeaturesCheckList lang={isEnglishPath ? 'en' : 'lt'} />
       <CtaBanner lang={isEnglishPath ? 'en' : 'lt'} />
-      <AboutSection />
-      <Team />
+      <AboutSection lang={isEnglishPath ? 'en' : 'lt'} />
+      <Team lang={isEnglishPath ? 'en' : 'lt'} />
       <CtaCentered lang={isEnglishPath ? 'en' : 'lt'} />
     </main>
   );

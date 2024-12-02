@@ -1,11 +1,11 @@
 import React from 'react';
-import Image from "next/legacy/image";
+import Image from 'next/legacy/image';
 
 import { MailIcon, PhoneIcon } from '@heroicons/react/outline';
 
-export const Team = () => {
+export const Team = ({ lang = 'lt' }) => {
   return (
-    <div className="bg-white" id="komanda">
+    <div className="bg-white" id={lang === 'en' ? 'team' : 'komanda'}>
       <div className="mx-auto pt-12 pb-24 lg:py-24 px-4 max-w-7xl sm:px-6 lg:px-8">
         <div className="space-y-12 lg:grid lg:grid-cols-3 lg:gap-8 lg:space-y-0">
           <div className="space-y-5 sm:space-y-4">
