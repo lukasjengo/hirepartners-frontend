@@ -5,9 +5,9 @@ import {
 } from '@heroicons/react/outline';
 import React from 'react';
 
-export const Features = () => {
+export const Features = ({ lang = 'lt' }) => {
   return (
-    <div className="py-24" id="paslaugos">
+    <div className="py-24" id={lang === 'en' ? 'services' : 'paslaugos'}>
       <div className="mx-auto max-w-md px-4 text-center sm:max-w-4xl sm:px-6 lg:px-8 lg:max-w-7xl">
         <h2 className="text-base font-semibold tracking-wider text-pink uppercase">
           Paslaugos

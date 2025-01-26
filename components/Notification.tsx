@@ -6,7 +6,7 @@ interface Props {
   actionElement?: JSX.Element;
   title: string;
   description: string;
-  setShow: React.Dispatch<React.SetStateAction<string | null>>;
+  setShow: React.Dispatch<React.SetStateAction<boolean>>;
   closeAction?: () => void;
 }
 
@@ -18,8 +18,8 @@ export const Notification = ({
   setShow,
   closeAction,
 }: Props) => {
-  const handleClick = () => {
-    setShow(null);
+  const handleClose = () => {
+    setShow(false);
     if (closeAction) {
       closeAction();
     }
@@ -38,7 +38,7 @@ export const Notification = ({
             </div>
             <div className="ml-4 flex-shrink-0 flex">
               <button
-                onClick={handleClick}
+                onClick={handleClose}
                 className="bg-white rounded-md inline-flex text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-pink-dark"
               >
                 <span className="sr-only">Close</span>

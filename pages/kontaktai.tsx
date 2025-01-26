@@ -39,6 +39,7 @@ export default function Kontaktai() {
 
   const router = useRouter();
   const [loading, setLoading] = useState(false);
+  const [showNotification, setShowNotification] = useState(false);
   const [formError, setFormError] = useState<null | string>(null);
   const [formData, setFormData] = useState(initialFormData);
 
@@ -54,6 +55,7 @@ export default function Kontaktai() {
     e.preventDefault();
     if (formData.agreeSend.length > 1) {
       setFormError('Forma užpildyta neteisingai');
+      setShowNotification(true);
       return;
     }
 
@@ -81,12 +83,14 @@ export default function Kontaktai() {
     } catch (error) {
       setLoading(false);
       setFormError(error.message);
+      setShowNotification(true);
       setFormData(initialFormData);
     }
   };
 
   useEffect(() => {
     const timeout = setTimeout(() => {
+      setShowNotification(false);
       setFormError(null);
     }, 7000);
 
@@ -96,12 +100,12 @@ export default function Kontaktai() {
   return (
     <main className="flex flex-col lg:flex-row max-w-7xl mx-auto mb-12 xl:mb-24">
       <Seo />
-      {formError && (
+      {showNotification && formError && (
         <Notification
           icon={<ExclamationCircleIcon className="h-6 w-6" />}
           title="Nepavyko išsiųsti žinutės"
           description={formError}
-          setShow={setFormError}
+          setShow={setShowNotification}
         />
       )}
       <div className="w-full px-4 sm:px-6 mt-10 mx-auto lg:mx-0">

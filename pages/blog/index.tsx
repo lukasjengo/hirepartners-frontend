@@ -1,7 +1,7 @@
 import { GetStaticProps } from 'next';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
-import Image from 'next/image';
+import Image from "next/legacy/image";
 import { NextSeo } from 'next-seo';
 import axios from 'axios';
 
@@ -66,17 +66,16 @@ export default function Blog({ data }: Props) {
               </div>
               <div className="flex-1 bg-white p-6 flex flex-col justify-between">
                 <div className="flex-1">
-                  <Link href={`${router.pathname}/${post.slug}`} passHref>
-                    <a className="block mt-2">
-                      <p className="text-xl font-semibold text-gray-900">
-                        {post.title.rendered}
-                      </p>
-                      <p className="mt-3 text-base text-gray-500">
-                        {`${stripHtml(
-                          trimText(post.excerpt.rendered, 250)
-                        )}...`}
-                      </p>
-                    </a>
+                  <Link
+                    href={`${router.pathname}/${post.slug}`}
+                    className="block mt-2"
+                  >
+                    <p className="text-xl font-semibold text-gray-900">
+                      {post.title.rendered}
+                    </p>
+                    <p className="mt-3 text-base text-gray-500">
+                      {`${stripHtml(trimText(post.excerpt.rendered, 250))}...`}
+                    </p>
                   </Link>
                 </div>
                 <div className="mt-6 flex items-center">
@@ -86,11 +85,12 @@ export default function Blog({ data }: Props) {
                     </time>
                   </div>
                   <div className="flex ml-auto">
-                    <Link href={`${router.pathname}/${post.slug}`} passHref>
-                      <a className="inline-block text-sm font-medium text-pink-dark border-b-2 border-pink hover:border-pink-dark transition-colors">
-                        Skaityti{' '}
-                        <ArrowRightIcon className="inline w-3 h-3 text-pink-dark" />
-                      </a>
+                    <Link
+                      href={`${router.pathname}/${post.slug}`}
+                      className="inline-block text-sm font-medium text-pink-dark border-b-2 border-pink hover:border-pink-dark transition-colors"
+                    >
+                      Skaityti{' '}
+                      <ArrowRightIcon className="inline w-3 h-3 text-pink-dark" />
                     </Link>
                   </div>
                 </div>

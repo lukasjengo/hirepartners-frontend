@@ -1,11 +1,11 @@
 import { CheckCircleIcon } from '@heroicons/react/solid';
 import React from 'react';
 
-export const FeaturesCheckList = () => {
+export const FeaturesCheckList = ({ lang = 'lt' }) => {
   return (
     <div
       className="max-w-7xl mx-auto pt-12 pb-24 lg:py-24 px-4 sm:px-6 lg:px-8 lg:grid lg:grid-cols-3 lg:gap-x-8"
-      id="kodel-mes"
+      id={lang === 'en' ? 'why-us' : 'kodel-mes'}
     >
       <div>
         <h2 className="text-base font-semibold text-pink uppercase tracking-wide">

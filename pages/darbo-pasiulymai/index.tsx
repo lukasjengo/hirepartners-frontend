@@ -12,14 +12,14 @@ import { JobResponse } from 'types/Job';
 const Seo = () => (
   <NextSeo
     title="Darbo pasiūlymai"
-    description="Čia rasite visus aktyvius hire partners komandos kruopščiai atrinktus darbo
+    description="Čia rasite visus aktyvius Hire Partners komandos kruopščiai atrinktus darbo
     pasiūlymus."
     openGraph={{
       type: 'website',
       url: 'https://www.hirepartners.lt/darbo-pasiulymai',
       title: 'Darbo pasiūlymai | HirePartners.lt',
       description:
-        'Čia rasite visus aktyvius hire partners komandos kruopščiai atrinktus darbo pasiūlymus.',
+        'Čia rasite visus aktyvius Hire Partners komandos kruopščiai atrinktus darbo pasiūlymus.',
     }}
   />
 );
@@ -46,28 +46,29 @@ export default function DarboPasiulymai({ data }: Props) {
             <ul className="divide-y divide-pink">
               {data.map((job) => (
                 <li key={job.id}>
-                  <Link href={`${router.pathname}/${job.slug}`} passHref>
-                    <a className="block hover:bg-pink-dark transition-colors">
-                      <div className="px-4 py-4 sm:px-6">
-                        <div className="flex items-center justify-between">
-                          <p className="text-sm font-medium text-pink truncate capitalize">
-                            {job.title.rendered}
+                  <Link
+                    href={`${router.pathname}/${job.slug}`}
+                    className="block hover:bg-pink-dark transition-colors"
+                  >
+                    <div className="px-4 py-4 sm:px-6">
+                      <div className="flex items-center justify-between">
+                        <p className="text-sm font-medium text-pink truncate capitalize">
+                          {job.title.rendered}
+                        </p>
+                      </div>
+                      <div className="mt-2 flex flex-col sm:flex-row justify-between">
+                        <div className="flex">
+                          <p className="flex items-center text-sm text-white opacity-90">
+                            <LocationMarkerIcon className="flex-shrink-0 mr-1.5 h-5 w-5 text-gray-400" />
+                            {job.acf.location}
                           </p>
                         </div>
-                        <div className="mt-2 flex flex-col sm:flex-row justify-between">
-                          <div className="flex">
-                            <p className="flex items-center text-sm text-white opacity-90">
-                              <LocationMarkerIcon className="flex-shrink-0 mr-1.5 h-5 w-5 text-gray-400" />
-                              {job.acf.location}
-                            </p>
-                          </div>
-                          <div className="mt-2 flex items-center text-sm text-white opacity-90">
-                            <CurrencyEuroIcon className="flex-shrink-0 mr-1.5 h-5 w-5 text-gray-400" />
-                            <p>From {job.acf.monthly_salary} Eur Gross</p>
-                          </div>
+                        <div className="mt-2 flex items-center text-sm text-white opacity-90">
+                          <CurrencyEuroIcon className="flex-shrink-0 mr-1.5 h-5 w-5 text-gray-400" />
+                          <p>From {job.acf.monthly_salary} Eur Gross</p>
                         </div>
                       </div>
-                    </a>
+                    </div>
                   </Link>
                 </li>
               ))}

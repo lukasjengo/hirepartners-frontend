@@ -4,13 +4,7 @@ import axios from 'axios';
 import { LocationMarkerIcon } from '@heroicons/react/outline';
 
 import { JobSkeleton } from 'components';
-import {
-  getTextBetweenSymbols,
-  removeAllWhiteSpace,
-  splitAtLinebreaks,
-  stripHtml,
-  trimText,
-} from 'utils/stringUtils';
+import { getTextBetweenSymbols, stripHtml, trimText } from 'utils/stringUtils';
 import { JobResponse } from 'types/Job';
 
 interface Props {

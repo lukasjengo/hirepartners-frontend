@@ -1,15 +1,22 @@
 import { CheckIcon } from '@heroicons/react/outline';
 import React from 'react';
 
-export const AboutSection = () => {
+export const AboutSection = ({ lang = 'lt' }) => {
   return (
-    <div className="relative py-20 sm:py-24 lg:py-32" id="apie-mus">
+    <div
+      className="relative py-20 sm:py-24 lg:py-32"
+      id={lang === 'en' ? 'about-us' : 'apie-mus'}
+    >
       <div className="mx-auto max-w-md px-4 text-center sm:max-w-4xl sm:px-6 lg:px-8 lg:max-w-7xl">
         <h2 className="text-base font-semibold tracking-wider text-pink uppercase">
           Apie mus
         </h2>
         <p className="mt-2 text-3xl font-extrabold text-pink-darkest tracking-tight sm:text-4xl">
-          Mes esame Hire Partners – <a className="hover:text-pink" href="https://ledomintys.lt/">„Ledo Mintys”</a> dalis
+          Mes esame Hire Partners –{' '}
+          <a className="hover:text-pink" href="https://ledomintys.lt/">
+            „Ledo Mintys”
+          </a>{' '}
+          dalis
         </p>
         <p className="mt-5 max-w-prose mx-auto text-xl text-gray-500">
           Orientuojamės į personalo atrankas. Norime ir siekiame būti
