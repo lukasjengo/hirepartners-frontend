@@ -71,19 +71,6 @@ export const Header = ({ lang = 'lt' }) => {
                 >
                   {lang === 'lt' ? 'Komanda' : 'Team'}
                 </NavLink>
-                <NavLink
-                  href={lang === 'lt' ? '/en' : '/'}
-                  className="text-base font-medium text-gray-600 hover:text-pink"
-                >
-                  <div className="relative rounded overflow-hidden h-6 w-8 hover:opacity-80 transition-opacity">
-                    <Image
-                      src={lang === 'lt' ? '/us.svg' : '/lt.svg'}
-                      alt="Language select flag"
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                </NavLink>
               </nav>
               <div className="flex items-center justify-end md:flex-1 lg:w-0">
                 <Link
@@ -176,20 +163,6 @@ export const Header = ({ lang = 'lt' }) => {
                     className="text-base font-medium text-gray-600 hover:text-pink"
                   >
                     {lang === 'lt' ? 'Komanda' : 'Team'}
-                  </CloseButton>
-                  <CloseButton
-                    as={NavLink}
-                    href={lang === 'lt' ? '/en' : '/'}
-                    className="text-base font-medium text-gray-600 hover:text-pink mt-2 sm:mt-0"
-                  >
-                    <div className="relative rounded overflow-hidden h-6 w-8 hover:opacity-80 transition-opacity">
-                      <Image
-                        src={lang === 'lt' ? '/us.svg' : '/lt.svg'}
-                        alt="Language select flag"
-                        fill
-                        className="object-cover"
-                      />
-                    </div>
                   </CloseButton>
                 </div>
               </div>
